@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-drag-and-resize": {
+      "projectType": "library",
+      "root": "projects/ngx-drag-and-resize",
+      "sourceRoot": "projects/ngx-drag-and-resize/src",
+      "prefix": "ngx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-drag-and-resize/tsconfig.lib.json",
+            "project": "projects/ngx-drag-and-resize/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-drag-and-resize/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-drag-and-resize/src/test.ts",
+            "tsConfig": "projects/ngx-drag-and-resize/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-drag-and-resize/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-drag-and-resize/tsconfig.lib.json",
+              "projects/ngx-drag-and-resize/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-drag-and-resize"
 }
