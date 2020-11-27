@@ -1,12 +1,4 @@
-import { NgModule } from '@angular/core';
-import { NgxDragAndResizeComponent } from './ngx-drag-and-resize.component';
+import {NgModule} from '@angular/core';
 
-
-
-@NgModule({
-  declarations: [NgxDragAndResizeComponent],
-  imports: [
-  ],
-  exports: [NgxDragAndResizeComponent]
-})
+@NgModule()
 export class NgxDragAndResizeModule { }
