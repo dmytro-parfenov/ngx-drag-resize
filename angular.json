@@ -115,7 +115,6 @@
             "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/ngx-drag-resize-demo/src/favicon.ico",
               "projects/ngx-drag-resize-demo/src/assets"
             ],
             "styles": [
@@ -181,7 +180,6 @@
             "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-drag-resize-demo/karma.conf.js",
             "assets": [
-              "projects/ngx-drag-resize-demo/src/favicon.ico",
               "projects/ngx-drag-resize-demo/src/assets"
             ],
             "styles": [
