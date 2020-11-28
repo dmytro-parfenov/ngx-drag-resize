@@ -1,24 +1,70 @@
-# NgxDragResize
+# ngx-drag-resize
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+The library provides opportunity to use drag and resize functionality on HTML element
 
-## Code scaffolding
+## Support
 
-Run `ng generate component component-name --project ngx-drag-resize` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-drag-resize`.
-> Note: Don't forget to add `--project ngx-drag-resize` or else it will be added to the default project in your `angular.json` file. 
+ - Angular 11.0.1 and above
+ 
+## Install
 
-## Build
+NPM: `npm install ngx-drag-resize`
 
-Run `ng build ngx-drag-resize` to build the project. The build artifacts will be stored in the `dist/` directory.
+Yarn: `yarn add ngx-drag-resize`
 
-## Publishing
+## Usage
 
-After building your library with `ng build ngx-drag-resize`, go to the dist folder `cd dist/ngx-drag-resize` and run `npm publish`.
+Import `NgxDragResizeModule` to your working module
 
-## Running unit tests
+```
+import {NgxDragResizeModule} from 'ngx-drag-resize';
 
-Run `ng test ngx-drag-resize` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  imports: [
+    NgxDragResizeModule
+  ]
+})
+export class AppModule { }
+```
 
-## Further help
+Use directives in your template
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Simple drag
+
+```
+<div ngxDrag>drag me</div>
+```
+
+Initiates only by dragging `ngxDragHandle`
+
+```
+<div ngxDrag>
+  <span>drag me</span>
+  <span ngxDragHandle>handle</span>
+</div>
+```
+
+A simple resize will work only by using scroll or two fingers on touch devices
+
+```
+<div ngxResize>resize me</div>
+```
+
+Resize using borders.
+You have to style all elements as you want.
+
+```
+<div ngxResize>
+  <span>resize me</span>
+  <div [ngxResizeHandle]="NgxResizeHandleType.TopLeft"></div>
+  <div [ngxResizeHandle]="NgxResizeHandleType.Top"></div>
+  <div [ngxResizeHandle]="NgxResizeHandleType.TopRight"></div>
+  <div [ngxResizeHandle]="NgxResizeHandleType.Right"></div>
+  <div [ngxResizeHandle]="NgxResizeHandleType.BottomRight"></div>
+  <div [ngxResizeHandle]="NgxResizeHandleType.Bottom"></div>
+  <div [ngxResizeHandle]="NgxResizeHandleType.BottomLeft"></div>
+  <div [ngxResizeHandle]="NgxResizeHandleType.Left"></div>
+</div>
+```
+
+More examples you can find in [demo app](https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize-demo)

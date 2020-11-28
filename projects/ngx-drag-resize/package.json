@@ -3,7 +3,7 @@
   "description": "The library provides opportunity to use drag and resize functionality on HTML element",
   "version": "0.0.1",
   "keywords": ["angular", "drag", "resize"],
-  "homepage": "https://github.com/dmytro-parfenov/ngx-drag-resize",
+  "homepage": "https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize",
   "bugs": {
     "email": "dmitryparfenov937@gmail.com",
     "url": "https://github.com/dmytro-parfenov/ngx-drag-resize/issues"
