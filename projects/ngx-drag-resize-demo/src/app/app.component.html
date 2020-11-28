@@ -1,3 +1,39 @@
+<h1>Drag</h1>
+<hr>
+
+<h3>Simple drag</h3>
+
+<div class="rect move"
+     ngxDrag></div>
+
+<h3>Drag usingx handle</h3>
+
+<div class="rect"
+     ngxDrag>
+  <div class="move handle"
+       ngxDragHandle>handle</div>
+</div>
+
+<h3>Drag only inside the window</h3>
+
+<div class="rect move"
+     ngxDrag
+     ngxDragBoundary="window"></div>
+
+<h3>Drag only inside the specific area</h3>
+
+<section class="area" id="drag-area">
+  <div class="rect move offset-small"
+       ngxDrag
+       ngxDragBoundary="#drag-area"></div>
+</section>
+
+<h3>Drag with disabled 'y' axis</h3>
+
+<div class="rect move"
+     ngxDrag
+     ngxDragLockAxis="y"></div>
+
 <h1>Resize</h1>
 <hr>
 
@@ -67,42 +103,6 @@
     <span>Ctrl + scroll</span>
   </div>
 </section>
-
-<h1>Drag</h1>
-<hr>
-
-<h3>Simple drag</h3>
-
-<div class="rect move"
-     ngxDrag></div>
-
-<h3>Drag usingx handle</h3>
-
-<div class="rect"
-     ngxDrag>
-  <div class="move handle"
-       ngxDragHandle>handle</div>
-</div>
-
-<h3>Drag only inside the window</h3>
-
-<div class="rect move"
-     ngxDrag
-     ngxDragBoundary="window"></div>
-
-<h3>Drag only inside the specific area</h3>
-
-<section class="area" id="drag-area">
-  <div class="rect move offset-small"
-       ngxDrag
-       ngxDragBoundary="#drag-area"></div>
-</section>
-
-<h3>Drag with disabled 'y' axis</h3>
-
-<div class="rect move"
-     ngxDrag
-     ngxDragLockAxis="y"></div>
 
 <h1>Drag and Resize</h1>
 <hr>
