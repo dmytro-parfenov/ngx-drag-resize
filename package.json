@@ -26,10 +26,8 @@
     "lint:lib": "ng run ngx-drag-resize:lint",
     "lint:demo": "ng run ngx-drag-resize-demo:lint",
     "build:lib:prod": "ng run ngx-drag-resize:build:production",
-    "build:demo:prod": "ng run ngx-drag-resize-demo:build:production",
-    "build:demo:prod-gh-pages": "ng run ngx-drag-resize-demo:build:production,gh-pages",
-    "build:lib-and-demo:prod": "npm run build:lib:prod && npm run build:demo:prod",
-    "build:lib-and-demo:prod-gh-pages": "npm run build:lib:prod && npm run build:demo:prod-gh-pages",
+    "build:demo:prod": "npm run build:lib:prod && ng run ngx-drag-resize-demo:build:production",
+    "build:demo:prod-gh-pages": "npm run build:lib:prod && ng run ngx-drag-resize-demo:build:production,gh-pages",
     "docs:lib":"npm run compodoc --prefix projects/ngx-drag-resize"
   },
   "private": true,
