@@ -125,6 +125,7 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "demo",
               "fileReplacements": [
                 {
                   "replace": "projects/ngx-drag-resize-demo/src/environments/environment.ts",
