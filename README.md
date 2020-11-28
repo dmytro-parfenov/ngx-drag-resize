@@ -38,7 +38,7 @@ Run `npm run build:demo:prod-gh-pages` to make a production build of the demo ap
 
 Run `npm run docs:lib` to build the documentation for the library. The build artifacts will be stored in the `docs` directory.
 
-##Contributing
+## Contributing
 
 [Contributing guideline](https://github.com/dmytro-parfenov/ngx-drag-resize/blob/master/CONTRIBUTING.md)
 
