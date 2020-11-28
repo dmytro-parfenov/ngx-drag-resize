@@ -31,8 +31,7 @@
     "docs:lib": "npm run compodoc --prefix projects/ngx-drag-resize",
     "lib:version:major": "npm run version:major --prefix projects/ngx-drag-resize",
     "lib:version:minor": "npm run version:minor --prefix projects/ngx-drag-resize",
-    "lib:version:patch": "npm run version:patch --prefix projects/ngx-drag-resize",
-    "lib:publish": "npm publish --prefix dist/ngx-drag-resize"
+    "lib:version:patch": "npm run version:patch --prefix projects/ngx-drag-resize"
   },
   "private": true,
   "dependencies": {
