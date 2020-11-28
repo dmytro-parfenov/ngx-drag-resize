@@ -1,5 +1,5 @@
 import {Boundary} from '../shared/boundary/boundary';
 
-export interface Drag extends Boundary {
+export interface NgxDrag extends Boundary {
   nativeEvent?: Event;
 }

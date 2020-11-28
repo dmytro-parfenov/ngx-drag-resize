@@ -16,7 +16,7 @@ import { DOCUMENT, isPlatformServer } from '@angular/common';
 import {BoundaryDirective} from '../shared/boundary/boundary.directive';
 import {PositionStrategy} from './position-strategy';
 import {Axis} from '../core/axis';
-import {Drag} from './drag';
+import {NgxDrag} from './drag';
 import {DragService} from '../core/drag.service';
 import {WINDOW} from '../core/window.token';
 import {MovementBase} from '../core/movement/movement-base';
@@ -90,7 +90,7 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   /**
    * Emits changes when element was dragged
    */
-  @Output() ngxDragChange = new EventEmitter<Drag>();
+  @Output() ngxDragged = new EventEmitter<NgxDrag>();
 
   constructor(
     private readonly elementRef: ElementRef<HTMLElement>,
@@ -124,22 +124,6 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   }
 
   /**
-   * Update size and position of host element
-   */
-  updateInitialRect(): void {
-    if (!this.window) {
-      return;
-    }
-
-    const rect = this.elementRef.nativeElement.getBoundingClientRect();
-
-    this.hostElementRectInitial = {
-      left: this.window.scrollX + rect.left,
-      top: this.window.scrollY + rect.top,
-    };
-  }
-
-  /**
    * Observe the element dragging which will be as handle for dragging
    */
   observe(target = this.elementRef.nativeElement): void {
@@ -166,15 +150,17 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
             }
           }
 
+          const offsetFromHost = {
+            top: event.initial.y - hostElementRect.top,
+            left: event.initial.x - hostElementRect.left,
+            bottom: hostElementRect.bottom - event.initial.y,
+            right: hostElementRect.right - event.initial.x,
+          } as Boundary;
+
           return {
             ...event,
             initiator: target,
-            offsetFromHost: {
-              top: event.initial.y - hostElementRect.top,
-              left: event.initial.x - hostElementRect.left,
-              bottom: hostElementRect.bottom - event.initial.y,
-              right: hostElementRect.right - event.initial.x,
-            } as Boundary,
+            offsetFromHost,
             initial: event.initial,
           };
         }),
@@ -183,6 +169,22 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
         takeUntil(this.observableTargetChange$)
       )
       .subscribe();
+  }
+
+  /**
+   * Update size and position of host element
+   */
+  private updateInitialRect(): void {
+    if (!this.window) {
+      return;
+    }
+
+    const rect = this.elementRef.nativeElement.getBoundingClientRect();
+
+    this.hostElementRectInitial = {
+      left: this.window.scrollX + rect.left,
+      top: this.window.scrollY + rect.top,
+    };
   }
 
   /**
@@ -255,12 +257,12 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   }
 
   /**
-   * Emits drag event to the {@link ngxDragChange}
+   * Emits drag event to the {@link ngxDragged}
    */
   private emitDrag(nativeEvent?: Event): void {
     const rect = this.elementRef.nativeElement.getBoundingClientRect();
 
-    this.ngxDragChange.emit({
+    this.ngxDragged.emit({
       nativeEvent,
       top: rect.top,
       right: rect.right,
