@@ -1,0 +1,132 @@
+.area {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  border-radius: 3px;
+  background: rgba(211, 211, 211, 0.25);
+
+  &.large {
+    height: 500px;
+  }
+}
+
+.rect {
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 1px darkgrey, 0 0 2px rgba(0,0,0,0.8);
+  background: #ffffff;
+
+  &.large {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+.move {
+  cursor: move;
+}
+
+.handle {
+  padding: 8px;
+  display: inline-flex;
+}
+
+.content-inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$handle-thickness: 10px;
+
+[data-resize-handle] {
+  position: absolute;
+  user-select: none;
+  z-index: 3;
+}
+
+[data-resize-handle='Top'],
+[data-resize-handle='Right'] {
+  top: 0;
+  right: 0;
+}
+
+[data-resize-handle='Bottom'],
+[data-resize-handle='Left'] {
+  bottom: 0;
+  left: 0;
+}
+
+[data-resize-handle='Top'],
+[data-resize-handle='Bottom'] {
+  width: 100%;
+  height: $handle-thickness;
+  cursor: ns-resize;
+}
+
+[data-resize-handle='Right'],
+[data-resize-handle='Left'] {
+  height: 100%;
+  width: $handle-thickness;
+  cursor: ew-resize;
+}
+
+[data-resize-handle='TopLeft'],
+[data-resize-handle='TopRight'],
+[data-resize-handle='BottomLeft'],
+[data-resize-handle='BottomRight'] {
+  width: $handle-thickness;
+  height: $handle-thickness;
+  z-index: 4;
+}
+
+[data-resize-handle='TopLeft'],
+[data-resize-handle='TopRight'] {
+  top: 0;
+}
+
+[data-resize-handle='BottomLeft'],
+[data-resize-handle='BottomRight'] {
+  bottom: 0;
+}
+
+[data-resize-handle='TopLeft'],
+[data-resize-handle='BottomLeft'] {
+  left: 0;
+}
+
+[data-resize-handle='TopRight'],
+[data-resize-handle='BottomRight'] {
+  right: 0;
+}
+
+[data-resize-handle='TopLeft'] {
+  cursor: nw-resize;
+}
+
+[data-resize-handle='TopRight'] {
+  cursor: ne-resize;
+}
+
+[data-resize-handle='BottomLeft'] {
+  cursor: sw-resize;
+}
+
+[data-resize-handle='BottomRight'] {
+  cursor: se-resize;
+}
+
+.offset-small, .offset-large {
+  position: absolute;
+}
+
+.offset-small {
+  top: 16px;
+  left: 16px;
+}
+
+.offset-large {
+  left: 100px;
+  top: 50px;
+}

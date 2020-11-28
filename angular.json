@@ -3,5 +3,218 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-drag-resize": {
+      "projectType": "library",
+      "root": "projects/ngx-drag-resize",
+      "sourceRoot": "projects/ngx-drag-resize/src",
+      "prefix": "ngx",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true,
+          "changeDetection": "OnPush"
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-drag-resize/tsconfig.lib.json",
+            "project": "projects/ngx-drag-resize/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-drag-resize/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-drag-resize/src/test.ts",
+            "tsConfig": "projects/ngx-drag-resize/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-drag-resize/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-drag-resize/tsconfig.lib.json",
+              "projects/ngx-drag-resize/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-drag-resize-demo": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true,
+          "changeDetection": "OnPush"
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "root": "projects/ngx-drag-resize-demo",
+      "sourceRoot": "projects/ngx-drag-resize-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ngx-drag-resize-demo",
+            "index": "projects/ngx-drag-resize-demo/src/index.html",
+            "main": "projects/ngx-drag-resize-demo/src/main.ts",
+            "polyfills": "projects/ngx-drag-resize-demo/src/polyfills.ts",
+            "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ngx-drag-resize-demo/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-drag-resize-demo/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ngx-drag-resize-demo/src/environments/environment.ts",
+                  "with": "projects/ngx-drag-resize-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "gh-pages": {
+              "deployUrl": "https://dmytro-parfenov.github.io/ngx-drag-resize-demo/"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngx-drag-resize-demo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngx-drag-resize-demo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngx-drag-resize-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-drag-resize-demo/src/test.ts",
+            "polyfills": "projects/ngx-drag-resize-demo/src/polyfills.ts",
+            "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-drag-resize-demo/karma.conf.js",
+            "assets": [
+              "projects/ngx-drag-resize-demo/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-drag-resize-demo/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-drag-resize-demo/tsconfig.app.json",
+              "projects/ngx-drag-resize-demo/tsconfig.spec.json",
+              "projects/ngx-drag-resize-demo/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ngx-drag-resize-demo/e2e/protractor.conf.js",
+            "devServerTarget": "ngx-drag-resize-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngx-drag-resize-demo:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-drag-resize"
 }

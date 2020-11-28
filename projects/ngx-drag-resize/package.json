@@ -1,0 +1,29 @@
+{
+  "name": "ngx-drag-resize",
+  "description": "The library provides opportunity to use drag and resize functionality on HTML element",
+  "version": "0.0.1",
+  "keywords": ["angular", "drag", "resize"],
+  "homepage": "https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize",
+  "bugs": {
+    "email": "dmitryparfenov937@gmail.com",
+    "url": "https://github.com/dmytro-parfenov/ngx-drag-resize/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "email": "dmitryparfenov937@gmail.com",
+    "name": "Dmytro Parfenov"
+  },
+  "scripts": {
+    "compodoc": "npx compodoc",
+    "version:major": "npm version major",
+    "version:minor": "npm version minor",
+    "version:patch": "npm version patch"
+  },
+  "peerDependencies": {
+    "@angular/common": "^11.0.1",
+    "@angular/core": "^11.0.1"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

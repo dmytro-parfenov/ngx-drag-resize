@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ngx-drag-resize documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">ngx-drag-resize documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="ngx-drag-resize">ngx-drag-resize</h1>
+<p>The library provides opportunity to use drag and resize functionality on HTML element</p>
+<h2 id="support">Support</h2>
+<ul>
+<li>Angular 11.0.1 and above</li>
+</ul>
+<h2 id="install">Install</h2>
+<p>NPM: <code>npm install ngx-drag-resize</code></p>
+<p>Yarn: <code>yarn add ngx-drag-resize</code></p>
+<h2 id="usage">Usage</h2>
+<p>Import <code>NgxDragResizeModule</code> to your working module</p>
+<div><pre class="line-numbers"><code class="language-none">import {NgxDragResizeModule} from &#39;ngx-drag-resize&#39;;
+
+&#64;NgModule({
+  imports: [
+    NgxDragResizeModule
+  ]
+})
+export class AppModule { }</code></pre></div><p>Use directives in your template</p>
+<p>Simple drag</p>
+<div><pre class="line-numbers"><code class="language-none">&lt;div ngxDrag&gt;drag me&lt;/div&gt;</code></pre></div><p>Initiates only by dragging <code>ngxDragHandle</code></p>
+<div><pre class="line-numbers"><code class="language-none">&lt;div ngxDrag&gt;
+  &lt;span&gt;drag me&lt;/span&gt;
+  &lt;span ngxDragHandle&gt;handle&lt;/span&gt;
+&lt;/div&gt;</code></pre></div><p>A simple resize will work only by using scroll or two fingers on touch devices</p>
+<div><pre class="line-numbers"><code class="language-none">&lt;div ngxResize&gt;resize me&lt;/div&gt;</code></pre></div><p>Resize using borders.
+You have to style all elements as you want.</p>
+<div><pre class="line-numbers"><code class="language-none">&lt;div ngxResize&gt;
+  &lt;span&gt;resize me&lt;/span&gt;
+  &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.TopLeft&quot;&gt;&lt;/div&gt;
+  &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.Top&quot;&gt;&lt;/div&gt;
+  &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.TopRight&quot;&gt;&lt;/div&gt;
+  &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.Right&quot;&gt;&lt;/div&gt;
+  &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.BottomRight&quot;&gt;&lt;/div&gt;
+  &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.Bottom&quot;&gt;&lt;/div&gt;
+  &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.BottomLeft&quot;&gt;&lt;/div&gt;
+  &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.Left&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div><p>More examples you can find in <a href="https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize-demo">demo app</a></p>
+<h2 id="documentation">Documentation</h2>
+<p><a href="https://dmytro-parfenov.github.io/ngx-drag-resize/">Docs site</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

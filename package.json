@@ -1,12 +1,37 @@
 {
-  "name": "ngx-drag-and-resize",
+  "name": "ngx-drag-resize",
+  "description": "The project contains library that provides opportunity to use drag and resize functionality on HTML element",
   "version": "0.0.0",
+  "keywords": [
+    "angular",
+    "drag",
+    "resize"
+  ],
+  "homepage": "https://github.com/dmytro-parfenov/ngx-drag-resize",
+  "bugs": {
+    "email": "dmitryparfenov937@gmail.com",
+    "url": "https://github.com/dmytro-parfenov/ngx-drag-resize/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "email": "dmitryparfenov937@gmail.com",
+    "name": "Dmytro Parfenov"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint"
+    "start:lib": "ng run ngx-drag-resize:build --watch",
+    "start:demo": "ng run ngx-drag-resize-demo:serve --host 0.0.0.0 -o --disable-host-check",
+    "test:lib": "ng run ngx-drag-resize:test",
+    "test:demo": "ng run ngx-drag-resize-demo:test",
+    "lint:lib": "ng run ngx-drag-resize:lint",
+    "lint:demo": "ng run ngx-drag-resize-demo:lint",
+    "build:lib:prod": "ng run ngx-drag-resize:build:production",
+    "build:demo:prod": "npm run build:lib:prod && ng run ngx-drag-resize-demo:build:production",
+    "build:demo:prod-gh-pages": "npm run build:lib:prod && ng run ngx-drag-resize-demo:build:production,gh-pages",
+    "docs:lib": "npm run compodoc --prefix projects/ngx-drag-resize",
+    "lib:version:major": "npm run version:major --prefix projects/ngx-drag-resize",
+    "lib:version:minor": "npm run version:minor --prefix projects/ngx-drag-resize",
+    "lib:version:patch": "npm run version:patch --prefix projects/ngx-drag-resize"
   },
   "private": true,
   "dependencies": {
@@ -23,8 +48,10 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1100.2",
     "@angular/cli": "~11.0.2",
     "@angular/compiler-cli": "~11.0.1",
+    "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
@@ -35,6 +62,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",

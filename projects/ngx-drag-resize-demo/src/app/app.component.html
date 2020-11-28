@@ -1,0 +1,128 @@
+<h1>Drag</h1>
+<hr>
+
+<h3>Simple drag</h3>
+
+<div class="rect move"
+     ngxDrag></div>
+
+<h3>Drag using handle</h3>
+
+<div class="rect"
+     ngxDrag>
+  <div class="move handle"
+       ngxDragHandle>handle</div>
+</div>
+
+<h3>Drag only inside the window</h3>
+
+<div class="rect move"
+     ngxDrag
+     ngxDragBoundary="window"></div>
+
+<h3>Drag only inside the specific area</h3>
+
+<section class="area" id="drag-area">
+  <div class="rect move offset-small"
+       ngxDrag
+       ngxDragBoundary="#drag-area"></div>
+</section>
+
+<h3>Drag with disabled 'y' axis</h3>
+
+<div class="rect move"
+     ngxDrag
+     ngxDragLockAxis="y"></div>
+
+<h1>Resize</h1>
+<hr>
+
+<h3>Simple resize</h3>
+
+<section class="area" id="resize-area">
+  <div class="rect offset-small"
+       ngxResize
+       [ngxResizeMinWidth]="50"
+       [ngxResizeMinHeight]="50"
+       ngxResizeBoundary="#resize-area">
+    <div [ngxResizeHandle]="handleType.TopLeft" data-resize-handle='TopLeft'></div>
+    <div [ngxResizeHandle]="handleType.Top" data-resize-handle='Top'></div>
+    <div [ngxResizeHandle]="handleType.TopRight" data-resize-handle='TopRight'></div>
+    <div [ngxResizeHandle]="handleType.Right" data-resize-handle='Right'></div>
+    <div [ngxResizeHandle]="handleType.BottomRight" data-resize-handle='BottomRight'></div>
+    <div [ngxResizeHandle]="handleType.Bottom" data-resize-handle='Bottom'></div>
+    <div [ngxResizeHandle]="handleType.BottomLeft" data-resize-handle='BottomLeft'></div>
+    <div [ngxResizeHandle]="handleType.Left" data-resize-handle='Left'></div>
+  </div>
+</section>
+
+<h3>Resize with proportions</h3>
+
+<section class="area" id="resize-area-2">
+  <div class="rect content-inside offset-large"
+       ngxResize
+       [ngxResizeAspectRatio]="56.25"
+       [ngxResizeMinWidth]="50"
+       [ngxResizeMinHeight]="50"
+       ngxResizeBoundary="#resize-area-2">
+    <div [ngxResizeHandle]="handleType.TopLeft" data-resize-handle='TopLeft'></div>
+    <div [ngxResizeHandle]="handleType.Top" data-resize-handle='Top'></div>
+    <div [ngxResizeHandle]="handleType.TopRight" data-resize-handle='TopRight'></div>
+    <div [ngxResizeHandle]="handleType.Right" data-resize-handle='Right'></div>
+    <div [ngxResizeHandle]="handleType.BottomRight" data-resize-handle='BottomRight'></div>
+    <div [ngxResizeHandle]="handleType.Bottom" data-resize-handle='Bottom'></div>
+    <div [ngxResizeHandle]="handleType.BottomLeft" data-resize-handle='BottomLeft'></div>
+    <div [ngxResizeHandle]="handleType.Left" data-resize-handle='Left'></div>
+    <span>16:9</span>
+  </div>
+</section>
+
+<h3>Resize with disabled 'y' axis</h3>
+
+<section class="area" id="resize-area-3">
+  <div class="rect offset-small"
+       ngxResize
+       ngxResizeLockAxis="y"
+       [ngxResizeMinWidth]="50"
+       [ngxResizeMinHeight]="50"
+       ngxResizeBoundary="#resize-area-3">
+    <div [ngxResizeHandle]="handleType.Right" data-resize-handle='Right'></div>
+    <div [ngxResizeHandle]="handleType.Left" data-resize-handle='Left'></div>
+  </div>
+</section>
+
+<h3>Resize only by using mouse wheel or two fingers</h3>
+
+<section class="area large" id="resize-area-4">
+  <div class="rect content-inside offset-large large"
+       ngxResize
+       ngxResizeWheelInitiatorRegExp="ControlLeft|ControlRight"
+       [ngxResizeMinWidth]="200"
+       [ngxResizeMinHeight]="200"
+       ngxResizeBoundary="#resize-area-4">
+    <span>Ctrl + scroll / Two fingers</span>
+  </div>
+</section>
+
+<h1>Drag and Resize</h1>
+<hr>
+
+<section class="area" id="drag-resize-area">
+  <div class="rect offset-small move"
+       ngxDrag
+       ngxDragPositionStrategy="relative"
+       ngxDragBoundary="#drag-resize-area"
+       ngxResize
+       [ngxResizeMinWidth]="50"
+       [ngxResizeMinHeight]="50"
+       ngxResizeBoundary="#drag-resize-area">
+    <div [ngxResizeHandle]="handleType.TopLeft" data-resize-handle='TopLeft'></div>
+    <div [ngxResizeHandle]="handleType.Top" data-resize-handle='Top'></div>
+    <div [ngxResizeHandle]="handleType.TopRight" data-resize-handle='TopRight'></div>
+    <div [ngxResizeHandle]="handleType.Right" data-resize-handle='Right'></div>
+    <div [ngxResizeHandle]="handleType.BottomRight" data-resize-handle='BottomRight'></div>
+    <div [ngxResizeHandle]="handleType.Bottom" data-resize-handle='Bottom'></div>
+    <div [ngxResizeHandle]="handleType.BottomLeft" data-resize-handle='BottomLeft'></div>
+    <div [ngxResizeHandle]="handleType.Left" data-resize-handle='Left'></div>
+  </div>
+</section>
