@@ -97,11 +97,15 @@ export class DragService {
    */
   private forMove(initial: PositionBase): Observable<MovementBase> {
     return this.move$.pipe(
-      map((event) => ({
-        ...this.fromMovementNativeEvent(event),
-        initial,
-        nativeEvent: event,
-      })),
+      map((event) => {
+        const positionBase = this.fromMovementNativeEvent(event);
+
+        return {
+          ...positionBase,
+          initial,
+          nativeEvent: event,
+        };
+      }),
       takeUntil(this.leave$)
     );
   }
