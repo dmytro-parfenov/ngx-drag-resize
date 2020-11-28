@@ -1,0 +1,921 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ngx-drag-resize documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ngx-drag-resize documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>NgxDragDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/lib/drag/drag.directive.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The directive that allows to drag HTML element on page</p>
+
+            </p>
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                            <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+            </p>
+
+            <p class="comment">
+                <h3>Example</h3>
+            </p>
+            <div class="io-description">
+            </div>
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>[ngxDrag]</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#observe">observe</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngxDragBoundary">ngxDragBoundary</a>
+                            </li>
+                            <li>
+                                <a href="#ngxDragDisabled">ngxDragDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#ngxDragLockAxis">ngxDragLockAxis</a>
+                            </li>
+                            <li>
+                                <a href="#ngxDragPositionStrategy">ngxDragPositionStrategy</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngxDragged">ngxDragged</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#ngxDragBoundary">ngxDragBoundary</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(elementRef: ElementRef<HTMLElement>, renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>, dragService: DragService, window: Window, document: Document, platformId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank">object</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/lib/drag/drag.directive.ts:93</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>elementRef</td>
+                                                  
+                                                        <td>
+                                                                    <code>ElementRef&lt;HTMLElement&gt;</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>renderer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/Renderer2" target="_blank" >Renderer2</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dragService</td>
+                                                  
+                                                        <td>
+                                                                    <code>DragService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>window</td>
+                                                  
+                                                        <td>
+                                                                    <code>Window</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>document</td>
+                                                  
+                                                        <td>
+                                                                    <code>Document</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platformId</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxDragBoundary"></a>
+                        <b>ngxDragBoundary</b>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/lib/drag/drag.directive.ts:86</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Constrain for the dragging element.
+Can be as a HTMLElement or CSS selector.
+You can put &#39;window&#39; string to define window object as a constrain.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxDragDisabled"></a>
+                        <b>ngxDragDisabled</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/lib/drag/drag.directive.ts:79</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Disable any drag events</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxDragLockAxis"></a>
+                        <b>ngxDragLockAxis</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Axis" target="_self" >Axis</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/lib/drag/drag.directive.ts:74</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Locks axis for the dragging</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxDragPositionStrategy"></a>
+                        <b>ngxDragPositionStrategy</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#PositionStrategy" target="_self" >PositionStrategy</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;free&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/lib/drag/drag.directive.ts:69</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Define positioning strategy.</p>
+<p>&#39;free&#39; - position will changing by &#39;transform: translate3d()&#39; style</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+            <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxDragged"></a>
+                        <b>ngxDragged</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/lib/drag/drag.directive.ts:93</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Emits changes when element was dragged</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="observe"></a>
+                    <span class="name">
+                        <b>
+                            observe
+                        </b>
+                        <a href="#observe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>observe(target)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">src/lib/drag/drag.directive.ts:129</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Observe the element dragging which will be as handle for dragging</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>target</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>this.elementRef.nativeElement</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxDragBoundary"></a>
+                        <span class="name"><b>ngxDragBoundary</b><a href="#ngxDragBoundary"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>ngxDragBoundary(boundary)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/lib/drag/drag.directive.ts:86</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Constrain for the dragging element.
+Can be as a HTMLElement or CSS selector.
+You can put &#39;window&#39; string to define window object as a constrain.</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>boundary</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Directive,
+  ElementRef,
+  EventEmitter,
+  Inject,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+  PLATFORM_ID,
+  Renderer2,
+} from &#x27;@angular/core&#x27;;
+import { Subject } from &#x27;rxjs&#x27;;
+import { map, takeUntil, tap } from &#x27;rxjs/operators&#x27;;
+import { DOCUMENT, isPlatformServer } from &#x27;@angular/common&#x27;;
+import {BoundaryDirective} from &#x27;../shared/boundary/boundary.directive&#x27;;
+import {PositionStrategy} from &#x27;./position-strategy&#x27;;
+import {Axis} from &#x27;../core/axis&#x27;;
+import {NgxDrag} from &#x27;./drag&#x27;;
+import {DragService} from &#x27;../core/drag.service&#x27;;
+import {WINDOW} from &#x27;../core/window.token&#x27;;
+import {MovementBase} from &#x27;../core/movement/movement-base&#x27;;
+import {Movement} from &#x27;../core/movement/movement&#x27;;
+import {Boundary} from &#x27;../shared/boundary/boundary&#x27;;
+import {PositionBase} from &#x27;../core/position-base&#x27;;
+
+/**
+ * The directive that allows to drag HTML element on page
+ *
+ * @author Dmytro Parfenov &lt;dmitryparfenov937@gmail.com&gt;
+ *
+ * @dynamic
+ * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
+ */
+@Directive({
+  selector: &#x27;[ngxDrag]&#x27;,
+})
+export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDestroy {
+
+  /**
+   * Initial size and position of host element
+   */
+  private hostElementRectInitial: {
+    left: number;
+    top: number;
+  } | null &#x3D; null;
+
+  /**
+   * Emits when directive was destroyed
+   */
+  private destroy$ &#x3D; new Subject();
+
+  /**
+   * Emits when observable target was changed
+   */
+  private observableTargetChange$ &#x3D; new Subject();
+
+  /**
+   * Define positioning strategy.
+   *
+   * &#x27;free&#x27; - position will changing by &#x27;transform: translate3d()&#x27; style
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d
+   *
+   * &#x27;relative&#x27; - position will changing by &#x27;top&#x27; and &#x27;left&#x27; style
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
+   *
+   * Default is &#x27;free&#x27;.
+   */
+  @Input() ngxDragPositionStrategy: PositionStrategy &#x3D; &#x27;free&#x27;;
+
+  /**
+   * Locks axis for the dragging
+   */
+  @Input() ngxDragLockAxis: Axis &#x3D; null;
+
+  /**
+   * Disable any drag events
+   */
+  @Input() ngxDragDisabled &#x3D; false;
+
+  /**
+   * Constrain for the dragging element.
+   * Can be as a HTMLElement or CSS selector.
+   * You can put &#x27;window&#x27; string to define window object as a constrain.
+   */
+  @Input() set ngxDragBoundary(boundary: string | HTMLElement) {
+    this.boundary &#x3D; boundary;
+  }
+
+  /**
+   * Emits changes when element was dragged
+   */
+  @Output() ngxDragged &#x3D; new EventEmitter&lt;NgxDrag&gt;();
+
+  constructor(
+    private readonly elementRef: ElementRef&lt;HTMLElement&gt;,
+    private readonly renderer: Renderer2,
+    private readonly dragService: DragService,
+    @Inject(WINDOW) private readonly window: Window,
+    @Inject(DOCUMENT) private readonly document: Document,
+    @Inject(PLATFORM_ID) private readonly platformId: object
+  ) {
+    super(window, document);
+  }
+
+  /**
+   * @inheritDoc
+   */
+  ngOnInit(): void {
+    if (isPlatformServer(this.platformId)) {
+      return;
+    }
+
+    this.observe();
+  }
+
+  /**
+   * @inheritDoc
+   */
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+    this.observableTargetChange$.complete();
+  }
+
+  /**
+   * Observe the element dragging which will be as handle for dragging
+   */
+  observe(target &#x3D; this.elementRef.nativeElement): void {
+    this.observableTargetChange$.next();
+
+    let hostElementRect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+    let eventInitial: PositionBase | null &#x3D; null;
+
+    this.dragService
+      .createObserver(target)
+      .pipe(
+        tap((event) &#x3D;&gt; event.nativeEvent.preventDefault()),
+        map&lt;MovementBase, Movement&gt;((event) &#x3D;&gt; {
+          if (
+            !eventInitial ||
+            eventInitial.x !&#x3D;&#x3D; event.initial.x ||
+            eventInitial.y !&#x3D;&#x3D; event.initial.y
+          ) {
+            eventInitial &#x3D; event.initial;
+            hostElementRect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+
+            if (!this.hostElementRectInitial) {
+              this.updateInitialRect();
+            }
+          }
+
+          const offsetFromHost &#x3D; {
+            top: event.initial.y - hostElementRect.top,
+            left: event.initial.x - hostElementRect.left,
+            bottom: hostElementRect.bottom - event.initial.y,
+            right: hostElementRect.right - event.initial.x,
+          } as Boundary;
+
+          return {
+            ...event,
+            initiator: target,
+            offsetFromHost,
+            initial: event.initial,
+          };
+        }),
+        tap(this.onDrag.bind(this)),
+        takeUntil(this.destroy$),
+        takeUntil(this.observableTargetChange$)
+      )
+      .subscribe();
+  }
+
+  /**
+   * Update size and position of host element
+   */
+  private updateInitialRect(): void {
+    if (!this.window) {
+      return;
+    }
+
+    const rect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+
+    this.hostElementRectInitial &#x3D; {
+      left: this.window.scrollX + rect.left,
+      top: this.window.scrollY + rect.top,
+    };
+  }
+
+  /**
+   * Starts the calculation of drag event and changes host position
+   */
+  private onDrag(event: Movement): void {
+    if (this.ngxDragDisabled) {
+      return;
+    }
+
+    const hostElementRect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+    const boundaryRect &#x3D; this.getBoundary();
+
+    let left &#x3D; event.x - event.offsetFromHost.left;
+    let top &#x3D; event.y - event.offsetFromHost.top;
+
+    if (boundaryRect) {
+      left &#x3D; Math.max(boundaryRect.left, left);
+      left &#x3D; Math.min(
+        boundaryRect.left + (boundaryRect.right - boundaryRect.left) - hostElementRect.width,
+        left
+      );
+
+      top &#x3D; Math.max(boundaryRect.top, top);
+      top &#x3D; Math.min(
+        boundaryRect.top + (boundaryRect.bottom - boundaryRect.top) - hostElementRect.height,
+        top
+      );
+    }
+
+    if (this.ngxDragPositionStrategy &#x3D;&#x3D;&#x3D; &#x27;free&#x27; &amp;&amp; this.hostElementRectInitial) {
+      left &#x3D; left - this.hostElementRectInitial.left + this.window.scrollX;
+      top &#x3D; top - this.hostElementRectInitial.top + this.window.scrollY;
+
+      if (this.ngxDragLockAxis &#x3D;&#x3D;&#x3D; &#x27;y&#x27;) {
+        top &#x3D; hostElementRect.top - this.hostElementRectInitial.top + this.window.scrollY;
+      }
+
+      if (this.ngxDragLockAxis &#x3D;&#x3D;&#x3D; &#x27;x&#x27;) {
+        left &#x3D; hostElementRect.left - this.hostElementRectInitial.left + this.window.scrollX;
+      }
+
+      this.updateHostStyle(&#x27;transform&#x27;, &#x60;translate3d(${left}px, ${top}px, 0)&#x60;);
+      this.emitDrag(event.nativeEvent);
+      return;
+    }
+
+    if (this.ngxDragLockAxis &#x3D;&#x3D;&#x3D; &#x27;x&#x27;) {
+      this.updateHostStyle(&#x27;top&#x27;, &#x60;${this.basedOnBoundary(top, &#x27;top&#x27;)}px&#x60;);
+      this.emitDrag(event.nativeEvent);
+      return;
+    }
+
+    if (this.ngxDragLockAxis &#x3D;&#x3D;&#x3D; &#x27;y&#x27;) {
+      this.updateHostStyle(&#x27;left&#x27;, &#x60;${this.basedOnBoundary(left, &#x27;left&#x27;)}px&#x60;);
+      this.emitDrag(event.nativeEvent);
+      return;
+    }
+
+    this.updateHostStyle(&#x27;left&#x27;, &#x60;${this.basedOnBoundary(left, &#x27;left&#x27;)}px&#x60;);
+    this.updateHostStyle(&#x27;top&#x27;, &#x60;${this.basedOnBoundary(top, &#x27;top&#x27;)}px&#x60;);
+    this.emitDrag(event.nativeEvent);
+  }
+
+  /**
+   * Updates the host style
+   */
+  private updateHostStyle(style: string, value: any): void {
+    this.renderer.setStyle(this.elementRef.nativeElement, style, value);
+  }
+
+  /**
+   * Emits drag event to the {@link ngxDragged}
+   */
+  private emitDrag(nativeEvent?: Event): void {
+    const rect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+
+    this.ngxDragged.emit({
+      nativeEvent,
+      top: rect.top,
+      right: rect.right,
+      bottom: rect.bottom,
+      left: rect.left,
+    });
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'NgxDragDirective.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

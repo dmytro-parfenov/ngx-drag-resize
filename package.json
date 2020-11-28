@@ -2,7 +2,11 @@
   "name": "ngx-drag-resize",
   "description": "The project contains library that provides opportunity to use drag and resize functionality on HTML element",
   "version": "0.0.0",
-  "keywords": ["angular", "drag", "resize"],
+  "keywords": [
+    "angular",
+    "drag",
+    "resize"
+  ],
   "homepage": "https://github.com/dmytro-parfenov/ngx-drag-resize",
   "bugs": {
     "email": "dmitryparfenov937@gmail.com",
@@ -23,7 +27,8 @@
     "lint:demo": "ng run ngx-drag-resize-demo:lint",
     "build:lib:prod": "ng run ngx-drag-resize:build:production",
     "build:demo:prod": "ng run ngx-drag-resize-demo:build:production",
-    "build:lib-and-demo:prod": "npm run build:lib:prod && npm run build:demo:prod"
+    "build:lib-and-demo:prod": "npm run build:lib:prod && npm run build:demo:prod",
+    "docs:lib":"npm run compodoc --prefix projects/ngx-drag-resize"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +48,7 @@
     "@angular-devkit/build-angular": "~0.1100.2",
     "@angular/cli": "~11.0.2",
     "@angular/compiler-cli": "~11.0.1",
+    "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",

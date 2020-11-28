@@ -1,0 +1,1953 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ngx-drag-resize documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">ngx-drag-resize documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>NgxResizeDirective</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/lib/resize/resize.directive.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The directive that allows to resize HTML element on page</p>
+
+            </p>
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                            <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+            </p>
+
+            <p class="comment">
+                <h3>Example</h3>
+            </p>
+            <div class="io-description">
+            </div>
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>[ngxResize]</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#observe">observe</a>
+                            </li>
+                            <li>
+                                <a href="#unsubscribe">unsubscribe</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngxResizeAspectRatio">ngxResizeAspectRatio</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizeBoundary">ngxResizeBoundary</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizeDisabled">ngxResizeDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizeLockAxis">ngxResizeLockAxis</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizeMinHeight">ngxResizeMinHeight</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizeMinWidth">ngxResizeMinWidth</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizePosition">ngxResizePosition</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizeTouchesDisabled">ngxResizeTouchesDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizeWheelDisabled">ngxResizeWheelDisabled</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizeWheelInitiatorRegExp">ngxResizeWheelInitiatorRegExp</a>
+                            </li>
+                            <li>
+                                <a href="#ngxResizeWheelInverse">ngxResizeWheelInverse</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngxResized">ngxResized</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#ngxResizeBoundary">ngxResizeBoundary</a>
+                                </li>
+                                <li>
+                                    <a href="#ngxResizeWheelInitiatorRegExp">ngxResizeWheelInitiatorRegExp</a>
+                                </li>
+                                <li>
+                                    <a href="#ngxResizeWheelDisabled">ngxResizeWheelDisabled</a>
+                                </li>
+                                <li>
+                                    <a href="#ngxResizeTouchesDisabled">ngxResizeTouchesDisabled</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(elementRef: ElementRef<HTMLElement>, renderer: <a href="https://angular.io/api/core/Renderer2" target="_blank">Renderer2</a>, dragService: DragService, document: Document, window: Window, platformId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank">object</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">src/lib/resize/resize.directive.ts:171</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>elementRef</td>
+                                                  
+                                                        <td>
+                                                                    <code>ElementRef&lt;HTMLElement&gt;</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>renderer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/Renderer2" target="_blank" >Renderer2</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dragService</td>
+                                                  
+                                                        <td>
+                                                                    <code>DragService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>document</td>
+                                                  
+                                                        <td>
+                                                                    <code>Document</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>window</td>
+                                                  
+                                                        <td>
+                                                                    <code>Window</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platformId</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeAspectRatio"></a>
+                        <b>ngxResizeAspectRatio</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/lib/resize/resize.directive.ts:95</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Aspect ratio the element will use during resize</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeBoundary"></a>
+                        <b>ngxResizeBoundary</b>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/lib/resize/resize.directive.ts:112</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Constrain of the resizing area.
+Can be as a HTMLElement or CSS selector.
+You can put &#39;window&#39; string to define window object as a constrain.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeDisabled"></a>
+                        <b>ngxResizeDisabled</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/lib/resize/resize.directive.ts:100</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Disables any resize events</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeLockAxis"></a>
+                        <b>ngxResizeLockAxis</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Axis" target="_self" >Axis</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/lib/resize/resize.directive.ts:105</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Locks axis for the resize</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeMinHeight"></a>
+                        <b>ngxResizeMinHeight</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/lib/resize/resize.directive.ts:86</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Minimal height in px</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeMinWidth"></a>
+                        <b>ngxResizeMinWidth</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/lib/resize/resize.directive.ts:81</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Minimal width in px</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizePosition"></a>
+                        <b>ngxResizePosition</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#PositionType" target="_self" >PositionType</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;absolute&#x27;</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="166" class="link-to-prism">src/lib/resize/resize.directive.ts:166</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Position CSS style. Allows &#39;absolute&#39; and &#39;fixed&#39;. Default is &#39;absolute&#39;.
+Will be applied to host element.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeTouchesDisabled"></a>
+                        <b>ngxResizeTouchesDisabled</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="153" class="link-to-prism">src/lib/resize/resize.directive.ts:153</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Disables resize by touches.
+By default is &#39;false&#39;.
+Resize work by using two fingers.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeWheelDisabled"></a>
+                        <b>ngxResizeWheelDisabled</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/lib/resize/resize.directive.ts:138</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Disables resize by wheel.
+By default is &#39;false&#39;.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeWheelInitiatorRegExp"></a>
+                        <b>ngxResizeWheelInitiatorRegExp</b>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/lib/resize/resize.directive.ts:123</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A regular expression that matches with keyboard key code.
+When value is provided the element can be scaled by &#39;Key + wheel&#39;.
+If value not provided the element can be scaled just by &#39;wheel&#39;.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeWheelInverse"></a>
+                        <b>ngxResizeWheelInverse</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="146" class="link-to-prism">src/lib/resize/resize.directive.ts:146</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Enables inversion for wheel event</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+            <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResized"></a>
+                        <b>ngxResized</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="171" class="link-to-prism">src/lib/resize/resize.directive.ts:171</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Emits changes when element was resized</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="observe"></a>
+                    <span class="name">
+                        <b>
+                            observe
+                        </b>
+                        <a href="#observe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>observe(target: HTMLElement)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="224"
+                            class="link-to-prism">src/lib/resize/resize.directive.ts:224</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Observe the element dragging which will be as handle for resize</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>target</td>
+                                    <td>
+                                            <code>HTMLElement</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="unsubscribe"></a>
+                    <span class="name">
+                        <b>
+                            unsubscribe
+                        </b>
+                        <a href="#unsubscribe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>unsubscribe(target: HTMLElement)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="210"
+                            class="link-to-prism">src/lib/resize/resize.directive.ts:210</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Unsubscribe from the element dragging and remove it from an array of observable objects</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>target</td>
+                                    <td>
+                                            <code>HTMLElement</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeBoundary"></a>
+                        <span class="name"><b>ngxResizeBoundary</b><a href="#ngxResizeBoundary"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>ngxResizeBoundary(boundary)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/lib/resize/resize.directive.ts:112</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Constrain of the resizing area.
+Can be as a HTMLElement or CSS selector.
+You can put &#39;window&#39; string to define window object as a constrain.</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>boundary</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeWheelInitiatorRegExp"></a>
+                        <span class="name"><b>ngxResizeWheelInitiatorRegExp</b><a href="#ngxResizeWheelInitiatorRegExp"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>ngxResizeWheelInitiatorRegExp(pattern)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/lib/resize/resize.directive.ts:123</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>A regular expression that matches with keyboard key code.
+When value is provided the element can be scaled by &#39;Key + wheel&#39;.
+If value not provided the element can be scaled just by &#39;wheel&#39;.</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>pattern</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeWheelDisabled"></a>
+                        <span class="name"><b>ngxResizeWheelDisabled</b><a href="#ngxResizeWheelDisabled"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>ngxResizeWheelDisabled(disabled: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/lib/resize/resize.directive.ts:138</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Disables resize by wheel.
+By default is &#39;false&#39;.</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>disabled</td>
+                                                    
+                                                            <td>
+                                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngxResizeTouchesDisabled"></a>
+                        <span class="name"><b>ngxResizeTouchesDisabled</b><a href="#ngxResizeTouchesDisabled"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>ngxResizeTouchesDisabled(disabled: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="153" class="link-to-prism">src/lib/resize/resize.directive.ts:153</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Disables resize by touches.
+By default is &#39;false&#39;.
+Resize work by using two fingers.</p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>disabled</td>
+                                                    
+                                                            <td>
+                                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  AfterViewInit,
+  Directive,
+  ElementRef,
+  EventEmitter,
+  HostBinding,
+  Inject,
+  Input,
+  OnDestroy,
+  Output,
+  PLATFORM_ID,
+  Renderer2,
+} from &#x27;@angular/core&#x27;;
+import { fromEvent, Subject, Subscription } from &#x27;rxjs&#x27;;
+import { DOCUMENT, isPlatformServer } from &#x27;@angular/common&#x27;;
+import { filter, map, switchMap, takeUntil, tap } from &#x27;rxjs/operators&#x27;;
+import {BoundaryDirective} from &#x27;../shared/boundary/boundary.directive&#x27;;
+import {Axis} from &#x27;../core/axis&#x27;;
+import {PositionType} from &#x27;./position-type&#x27;;
+import {NgxResize} from &#x27;./resize&#x27;;
+import {DragService} from &#x27;../core/drag.service&#x27;;
+import {WINDOW} from &#x27;../core/window.token&#x27;;
+import {MovementBase} from &#x27;../core/movement/movement-base&#x27;;
+import {Movement} from &#x27;../core/movement/movement&#x27;;
+import {PositionBase} from &#x27;../core/position-base&#x27;;
+import {Boundary} from &#x27;../shared/boundary/boundary&#x27;;
+import {Scale} from &#x27;./scale&#x27;;
+import {NgxResizeHandleType} from &#x27;./resize-handle-type.enum&#x27;;
+
+/**
+ * The directive that allows to resize HTML element on page
+ *
+ * @author Dmytro Parfenov &lt;dmitryparfenov937@gmail.com&gt;
+ *
+ * @dynamic
+ * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
+ */
+@Directive({
+  selector: &#x27;[ngxResize]&#x27;,
+})
+export class NgxResizeDirective extends BoundaryDirective implements AfterViewInit, OnDestroy {
+
+  /**
+   * Emits when directive was destroyed
+   */
+  private destroy$ &#x3D; new Subject();
+
+  /**
+   * Emits next every time when behaviour for wheel event was changed
+   */
+  private wheelBehaviourChange$ &#x3D; new Subject();
+
+  /**
+   * Emits next every time when behaviour for touches event was changed
+   */
+  private touchBehaviourChange$ &#x3D; new Subject();
+
+  /**
+   * An array of observers which affect on resizable element
+   */
+  private observers: { subscription: Subscription; element: HTMLElement }[] &#x3D; [];
+
+  /**
+   * A regular expression for keyboard code
+   */
+  private wheelInitiatorRegExp: RegExp | null &#x3D; null;
+
+  /**
+   * Make a resize unavailable by wheel
+   */
+  private isWheelDisabled &#x3D; false;
+
+  /**
+   * Make a resize unavailable by touches
+   */
+  private isTouchesDisabled &#x3D; false;
+
+  /**
+   * Minimal width in px
+   */
+  @Input() ngxResizeMinWidth &#x3D; 0;
+
+  /**
+   * Minimal height in px
+   */
+  @Input() ngxResizeMinHeight &#x3D; 0;
+
+  /**
+   * Aspect ratio the element will use during resize
+   *
+   * @example
+   * 16/9 - 9/16 * 100 &#x3D; 56.25
+   * 1/1 - 1/1 * 100 &#x3D; 100
+   */
+  @Input() ngxResizeAspectRatio &#x3D; 0;
+
+  /**
+   * Disables any resize events
+   */
+  @Input() ngxResizeDisabled &#x3D; false;
+
+  /**
+   * Locks axis for the resize
+   */
+  @Input() ngxResizeLockAxis: Axis &#x3D; null;
+
+  /**
+   * Constrain of the resizing area.
+   * Can be as a HTMLElement or CSS selector.
+   * You can put &#x27;window&#x27; string to define window object as a constrain.
+   */
+  @Input() set ngxResizeBoundary(boundary: string | HTMLElement) {
+    this.boundary &#x3D; boundary;
+  }
+
+  /**
+   * A regular expression that matches with keyboard key code.
+   * When value is provided the element can be scaled by &#x27;Key + wheel&#x27;.
+   * If value not provided the element can be scaled just by &#x27;wheel&#x27;.
+   *
+   * @see https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
+   */
+  @Input() set ngxResizeWheelInitiatorRegExp(pattern: RegExp | string) {
+    if (!pattern) {
+      this.wheelInitiatorRegExp &#x3D; null;
+      this.subscribeForWheelEvent();
+      return;
+    }
+
+    this.wheelInitiatorRegExp &#x3D; new RegExp(pattern);
+    this.subscribeForWheelEvent();
+  }
+
+  /**
+   * Disables resize by wheel.
+   * By default is &#x27;false&#x27;.
+   */
+  @Input() set ngxResizeWheelDisabled(disabled: boolean) {
+    this.isWheelDisabled &#x3D; disabled;
+    this.subscribeForWheelEvent();
+  }
+
+  /**
+   * Enables inversion for wheel event
+   */
+  @Input() ngxResizeWheelInverse &#x3D; false;
+
+  /**
+   * Disables resize by touches.
+   * By default is &#x27;false&#x27;.
+   * Resize work by using two fingers.
+   */
+  @Input() set ngxResizeTouchesDisabled(disabled: boolean) {
+    this.isTouchesDisabled &#x3D; disabled;
+    this.subscribeForTouchEvents();
+  }
+
+  /**
+   * Position CSS style. Allows &#x27;absolute&#x27; and &#x27;fixed&#x27;. Default is &#x27;absolute&#x27;.
+   * Will be applied to host element.
+   *
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
+   */
+  @HostBinding(&#x27;style.position&#x27;)
+  @Input()
+  ngxResizePosition: PositionType &#x3D; &#x27;absolute&#x27;;
+
+  /**
+   * Emits changes when element was resized
+   */
+  @Output() ngxResized &#x3D; new EventEmitter&lt;NgxResize&gt;();
+
+  constructor(
+    readonly elementRef: ElementRef&lt;HTMLElement&gt;,
+    private readonly renderer: Renderer2,
+    private readonly dragService: DragService,
+    @Inject(DOCUMENT) private readonly document: Document,
+    @Inject(WINDOW) private readonly window: Window,
+    @Inject(PLATFORM_ID) private readonly platformId: object
+  ) {
+    super(window, document);
+  }
+
+  /**
+   * @inheritDoc
+   */
+  ngAfterViewInit(): void {
+    if (isPlatformServer(this.platformId)) {
+      return;
+    }
+
+    this.initialResize();
+    this.subscribeForWheelEvent();
+    this.subscribeForTouchEvents();
+  }
+
+  /**
+   * @inheritDoc
+   */
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+    this.wheelBehaviourChange$.complete();
+    this.touchBehaviourChange$.complete();
+  }
+
+  /**
+   * Unsubscribe from the element dragging and remove it from an array of observable objects
+   */
+  unsubscribe(target: HTMLElement): void {
+    const indexOf &#x3D; this.observers.findIndex((item) &#x3D;&gt; item.element &#x3D;&#x3D;&#x3D; target);
+
+    if (indexOf &lt; 0) {
+      return;
+    }
+
+    this.observers[indexOf].subscription.unsubscribe();
+    this.observers.splice(indexOf, 1);
+  }
+
+  /**
+   * Observe the element dragging which will be as handle for resize
+   */
+  observe(target: HTMLElement): void {
+    if (!this.resolveInitiatorType(target)) {
+      return;
+    }
+
+    let hostElementRect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+    let eventInitial: PositionBase | null &#x3D; null;
+
+    const subscription$ &#x3D; this.dragService
+      .createObserver(target)
+      .pipe(
+        tap((event) &#x3D;&gt; event.nativeEvent.preventDefault()),
+        tap((event) &#x3D;&gt; event.nativeEvent.stopImmediatePropagation()),
+        map&lt;MovementBase, Movement&gt;((event) &#x3D;&gt; {
+          if (
+            !eventInitial ||
+            eventInitial.x !&#x3D;&#x3D; event.initial.x ||
+            eventInitial.y !&#x3D;&#x3D; event.initial.y
+          ) {
+            eventInitial &#x3D; event.initial;
+            hostElementRect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+          }
+
+          const offsetFromHost &#x3D; {
+            top: event.initial.y - hostElementRect.top,
+            left: event.initial.x - hostElementRect.left,
+            bottom: hostElementRect.bottom - event.initial.y,
+            right: hostElementRect.right - event.initial.x,
+          } as Boundary;
+
+          return {
+            ...event,
+            initiator: target,
+            offsetFromHost,
+            initial: event.initial,
+            nativeEvent: event.nativeEvent,
+          };
+        }),
+        tap(this.onResize.bind(this)),
+        takeUntil(this.destroy$)
+      )
+      .subscribe();
+
+    this.observers.push({ subscription: subscription$, element: target });
+  }
+
+  /**
+   * Starts the subscription for touch events
+   */
+  private subscribeForTouchEvents(): void {
+    this.touchBehaviourChange$.next();
+
+    if (this.isTouchesDisabled || isPlatformServer(this.platformId)) {
+      return;
+    }
+
+    let prevDistance &#x3D; 0;
+
+    const touchStart$ &#x3D; fromEvent&lt;TouchEvent&gt;(this.elementRef.nativeElement, &#x27;touchstart&#x27;).pipe(
+      filter((event) &#x3D;&gt; event.targetTouches.length &#x3D;&#x3D;&#x3D; 2)
+    );
+
+    const touchEnd$ &#x3D; fromEvent&lt;TouchEvent&gt;(this.elementRef.nativeElement, &#x27;touchend&#x27;);
+
+    const touchMove$ &#x3D; fromEvent&lt;TouchEvent&gt;(this.elementRef.nativeElement, &#x27;touchmove&#x27;, {
+      passive: false,
+    }).pipe(
+      tap((event) &#x3D;&gt; event.preventDefault()),
+      filter((event) &#x3D;&gt; event.targetTouches.length &#x3D;&#x3D;&#x3D; 2 &amp;&amp; event.changedTouches.length &#x3D;&#x3D;&#x3D; 2)
+    );
+
+    touchStart$
+      .pipe(
+        tap(
+          (event) &#x3D;&gt; {
+            const aTouch &#x3D; event.targetTouches.item(0);
+            const bTouch &#x3D; event.targetTouches.item(1);
+
+            if (!aTouch || !bTouch) {
+              return;
+            }
+
+            prevDistance &#x3D; this.touchesDistance(aTouch, bTouch);
+          }),
+        switchMap(() &#x3D;&gt;
+          touchMove$.pipe(
+            tap((event) &#x3D;&gt; {
+              const aTouch &#x3D; event.targetTouches.item(0);
+              const bTouch &#x3D; event.targetTouches.item(1);
+
+              if (!aTouch || !bTouch) {
+                return;
+              }
+
+              const distance &#x3D; this.touchesDistance(aTouch, bTouch);
+
+              this.onScale({ delta: distance - prevDistance }, event);
+
+              prevDistance &#x3D; distance;
+            }),
+            takeUntil(touchEnd$)
+          )
+        ),
+        takeUntil(this.destroy$),
+        takeUntil(this.touchBehaviourChange$)
+      )
+      .subscribe();
+  }
+
+  /**
+   * Returns distance between two touches
+   */
+  private touchesDistance(a: Touch, b: Touch): number {
+    return Math.sqrt(Math.pow(b.clientX - a.clientX, 2) + Math.pow(b.clientY - a.clientY, 2));
+  }
+
+  /**
+   * Make a subscription for wheel events
+   */
+  private subscribeForWheelEvent(): void {
+    this.wheelBehaviourChange$.next();
+
+    if (this.isWheelDisabled || isPlatformServer(this.platformId)) {
+      return;
+    }
+
+    const wheel$ &#x3D; fromEvent&lt;WheelEvent&gt;(this.elementRef.nativeElement, &#x27;wheel&#x27;).pipe(
+      tap((event) &#x3D;&gt; event.preventDefault()),
+      tap((event) &#x3D;&gt; {
+        const delta &#x3D; this.ngxResizeWheelInverse ? event.deltaY : event.deltaY * -1;
+        this.onScale({ delta }, event);
+      }),
+      takeUntil(this.wheelBehaviourChange$),
+      takeUntil(this.destroy$)
+    );
+
+    if (!this.wheelInitiatorRegExp) {
+      wheel$.subscribe();
+      return;
+    }
+
+    const wheelInitiatorFilter &#x3D; filter&lt;KeyboardEvent&gt;((event) &#x3D;&gt;
+      this.wheelInitiatorRegExp ? this.wheelInitiatorRegExp.test(event.code) : true);
+
+    const wheelInitiatorStart$ &#x3D; fromEvent&lt;KeyboardEvent&gt;(this.window, &#x27;keydown&#x27;).pipe(
+      wheelInitiatorFilter
+    );
+
+    const wheelInitiatorEnd$ &#x3D; fromEvent&lt;KeyboardEvent&gt;(this.window, &#x27;keyup&#x27;).pipe(
+      wheelInitiatorFilter
+    );
+
+    wheelInitiatorStart$
+      .pipe(
+        switchMap(() &#x3D;&gt; wheel$.pipe(takeUntil(wheelInitiatorEnd$))),
+        takeUntil(this.wheelBehaviourChange$),
+        takeUntil(this.destroy$)
+      )
+      .subscribe();
+  }
+
+  /**
+   * Runs initial resize for the host element
+   */
+  private initialResize(): void {
+    setTimeout(() &#x3D;&gt; {
+      this.onScale({ delta: 0 });
+    });
+  }
+
+  /**
+   * Starts the calculation of scale event and changes host size
+   */
+  private onScale(scale: Scale, nativeEvent?: Event): void {
+    const hostElementRect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+
+    const boundaryRect &#x3D; this.getBoundary();
+
+    let maxUpscale &#x3D; scale.delta;
+
+    if (boundaryRect) {
+      maxUpscale &#x3D; Math.floor(
+        Math.min(
+          hostElementRect.top - boundaryRect.top,
+          boundaryRect.right - hostElementRect.right,
+          boundaryRect.bottom - hostElementRect.bottom,
+          hostElementRect.left - boundaryRect.left
+        )
+      );
+    }
+
+    const maxDownscale &#x3D;
+      Math.max(
+        0,
+        Math.min(
+          hostElementRect.width - this.ngxResizeMinWidth,
+          hostElementRect.height - this.ngxResizeMinHeight
+        )
+      ) * -1;
+
+    const delta &#x3D; Math.max(maxDownscale, Math.min(maxUpscale, scale.delta));
+
+    let top &#x3D; hostElementRect.top - delta / 2;
+    let left &#x3D; hostElementRect.left - delta / 2;
+
+    if (boundaryRect) {
+      top &#x3D; Math.max(boundaryRect.top, top);
+      left &#x3D; Math.max(boundaryRect.left, left);
+    }
+
+    let height &#x3D; hostElementRect.height + delta;
+    let width &#x3D; hostElementRect.width + delta;
+
+    if (boundaryRect) {
+      height &#x3D; Math.min(boundaryRect.bottom - top, height);
+      width &#x3D; Math.min(boundaryRect.right - left, width);
+    }
+
+    if (this.ngxResizeLockAxis &#x3D;&#x3D;&#x3D; &#x27;x&#x27;) {
+      left &#x3D; hostElementRect.left;
+      width &#x3D; hostElementRect.width;
+    }
+
+    if (this.ngxResizeLockAxis &#x3D;&#x3D;&#x3D; &#x27;y&#x27;) {
+      top &#x3D; hostElementRect.top;
+      height &#x3D; hostElementRect.height;
+    }
+
+    const proportionalSize &#x3D;
+      this.ngxResizeLockAxis &#x3D;&#x3D;&#x3D; &#x27;y&#x27;
+        ? this.fromWidthProportion(width)
+        : this.fromHeightProportion(height);
+
+    if (proportionalSize &amp;&amp; this.ngxResizeLockAxis &#x3D;&#x3D;&#x3D; &#x27;y&#x27;) {
+      height &#x3D; proportionalSize;
+      top &#x3D; hostElementRect.top - (height - hostElementRect.height) / 2;
+    }
+
+    if (proportionalSize &amp;&amp; this.ngxResizeLockAxis !&#x3D;&#x3D; &#x27;y&#x27;) {
+      width &#x3D; proportionalSize;
+      left &#x3D; hostElementRect.left - (width - hostElementRect.width) / 2;
+    }
+
+    if (
+      boundaryRect &amp;&amp;
+      (top &lt;&#x3D; boundaryRect.top ||
+        top + height &gt;&#x3D; boundaryRect.bottom ||
+        left &lt;&#x3D; boundaryRect.left ||
+        left + width &gt;&#x3D; boundaryRect.right)
+    ) {
+      top &#x3D; hostElementRect.top;
+      height &#x3D; hostElementRect.height;
+      left &#x3D; hostElementRect.left;
+      width &#x3D; hostElementRect.width;
+    }
+
+    this.updateHostStyle(&#x27;left&#x27;, &#x60;${this.basedOnBoundary(left, &#x27;left&#x27;)}px&#x60;);
+    this.updateHostStyle(&#x27;width&#x27;, &#x60;${width}px&#x60;);
+    this.updateHostStyle(&#x27;top&#x27;, &#x60;${this.basedOnBoundary(top, &#x27;top&#x27;)}px&#x60;);
+    this.updateHostStyle(&#x27;height&#x27;, &#x60;${height}px&#x60;);
+    this.emitResize(nativeEvent);
+  }
+
+  /**
+   * Check whether is resize is available for current initiator type
+   */
+  private canResize(initiatorType: NgxResizeHandleType): boolean {
+    switch (initiatorType) {
+      case NgxResizeHandleType.TopLeft:
+      case NgxResizeHandleType.TopRight:
+      case NgxResizeHandleType.BottomLeft:
+      case NgxResizeHandleType.BottomRight:
+        return !this.ngxResizeLockAxis;
+      case NgxResizeHandleType.Left:
+      case NgxResizeHandleType.Right:
+        return this.ngxResizeLockAxis !&#x3D;&#x3D; &#x27;x&#x27;;
+      case NgxResizeHandleType.Top:
+      case NgxResizeHandleType.Bottom:
+        return this.ngxResizeLockAxis !&#x3D;&#x3D; &#x27;y&#x27;;
+    }
+
+    return !this.ngxResizeLockAxis;
+  }
+
+  /**
+   * Starts the calculation of resize event and changes host size
+   */
+  private onResize(event: Movement): void {
+    if (this.ngxResizeDisabled) {
+      return;
+    }
+
+    const initiatorType &#x3D; this.resolveInitiatorType(event.initiator);
+
+    if (!initiatorType || !this.canResize(initiatorType)) {
+      return;
+    }
+
+    const hostElementRect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+
+    const boundaryRect &#x3D; this.getBoundary();
+
+    if (!boundaryRect) {
+      return;
+    }
+
+    switch (initiatorType) {
+      case NgxResizeHandleType.TopLeft:
+        return this.topLeftMovement(event, hostElementRect, boundaryRect);
+      case NgxResizeHandleType.Top:
+        return this.topMovement(event, hostElementRect, boundaryRect);
+      case NgxResizeHandleType.TopRight:
+        return this.topRightMovement(event, hostElementRect, boundaryRect);
+      case NgxResizeHandleType.Right:
+        return this.rightMovement(event, hostElementRect, boundaryRect);
+      case NgxResizeHandleType.BottomRight:
+        return this.bottomRightMovement(event, hostElementRect, boundaryRect);
+      case NgxResizeHandleType.Bottom:
+        return this.bottomMovement(event, hostElementRect, boundaryRect);
+      case NgxResizeHandleType.BottomLeft:
+        return this.bottomLeftMovement(event, hostElementRect, boundaryRect);
+      case NgxResizeHandleType.Left:
+        return this.leftMovement(event, hostElementRect, boundaryRect);
+    }
+  }
+
+  private topLeftMovement(event: Movement, hostElementRect: DOMRect, boundaryRect: Boundary): void {
+    if (this.ngxResizeAspectRatio) {
+      this.topMovement(event, hostElementRect, boundaryRect);
+      return;
+    }
+
+    this.topMovement(event, hostElementRect, boundaryRect);
+    this.leftMovement(event, hostElementRect, boundaryRect);
+  }
+
+  private topRightMovement(event: Movement, hostElementRect: DOMRect, boundaryRect: Boundary): void {
+    if (this.ngxResizeAspectRatio) {
+      this.topMovement(event, hostElementRect, boundaryRect);
+      return;
+    }
+
+    this.topMovement(event, hostElementRect, boundaryRect);
+    this.rightMovement(event, hostElementRect, boundaryRect);
+  }
+
+  private bottomRightMovement(event: Movement, hostElementRect: DOMRect, boundaryRect: Boundary): void {
+    if (this.ngxResizeAspectRatio) {
+      this.bottomMovement(event, hostElementRect, boundaryRect);
+      return;
+    }
+
+    this.bottomMovement(event, hostElementRect, boundaryRect);
+    this.rightMovement(event, hostElementRect, boundaryRect);
+  }
+
+  private bottomLeftMovement(event: Movement, hostElementRect: DOMRect, boundaryRect: Boundary): void {
+    if (this.ngxResizeAspectRatio) {
+      this.bottomMovement(event, hostElementRect, boundaryRect);
+      return;
+    }
+
+    this.bottomMovement(event, hostElementRect, boundaryRect);
+    this.leftMovement(event, hostElementRect, boundaryRect);
+  }
+
+  private topMovement(event: Movement, hostElementRect: DOMRect, boundaryRect: Boundary): void {
+    let y &#x3D; event.y - event.offsetFromHost.top;
+
+    if (boundaryRect) {
+      y &#x3D; Math.max(boundaryRect.top, Math.min(y, boundaryRect.bottom));
+    }
+
+    let top &#x3D; Math.min(y, hostElementRect.bottom - this.ngxResizeMinHeight);
+    let height &#x3D; hostElementRect.height - (top - hostElementRect.top);
+
+    const initiatorType &#x3D; this.resolveInitiatorType(event.initiator);
+
+    const widthProportions &#x3D; initiatorType ? this.getWidthProportions(boundaryRect, hostElementRect, initiatorType, height) : null;
+
+    if (widthProportions) {
+      top &#x3D; top + (height - this.fromWidthProportion(widthProportions.width));
+      height &#x3D; Math.min(height, this.fromWidthProportion(widthProportions.width));
+    }
+
+    this.updateHostStyle(&#x27;top&#x27;, &#x60;${this.basedOnBoundary(top, &#x27;top&#x27;)}px&#x60;);
+    this.updateHostStyle(&#x27;height&#x27;, &#x60;${height}px&#x60;);
+
+    if (widthProportions) {
+      this.updateHostStyle(&#x27;left&#x27;, &#x60;${this.basedOnBoundary(widthProportions.left, &#x27;left&#x27;)}px&#x60;);
+      this.updateHostStyle(&#x27;width&#x27;, &#x60;${widthProportions.width}px&#x60;);
+    }
+
+    this.emitResize(event.nativeEvent);
+  }
+
+  private rightMovement(event: Movement, hostElementRect: DOMRect, boundaryRect: Boundary): void {
+    let x &#x3D; event.x + event.offsetFromHost.right;
+
+    if (boundaryRect) {
+      x &#x3D; Math.max(boundaryRect.left, Math.min(x, boundaryRect.right));
+    }
+
+    let width &#x3D; Math.max(this.ngxResizeMinWidth, x - hostElementRect.left);
+
+    if (boundaryRect) {
+      width &#x3D; Math.min(width, boundaryRect.right - hostElementRect.left);
+    }
+
+    const initiatorType &#x3D; this.resolveInitiatorType(event.initiator);
+
+    const heightProportions &#x3D; initiatorType ? this.getHeightProportions(boundaryRect, hostElementRect, initiatorType, width) : null;
+
+    if (heightProportions) {
+      width &#x3D; Math.min(width, this.fromHeightProportion(heightProportions.height));
+    }
+
+    this.updateHostStyle(&#x27;width&#x27;, &#x60;${width}px&#x60;);
+
+    if (heightProportions) {
+      this.updateHostStyle(&#x27;top&#x27;, &#x60;${this.basedOnBoundary(heightProportions.top, &#x27;top&#x27;)}px&#x60;);
+      this.updateHostStyle(&#x27;height&#x27;, &#x60;${heightProportions.height}px&#x60;);
+    }
+
+    this.emitResize(event.nativeEvent);
+  }
+
+  private bottomMovement(event: Movement, hostElementRect: DOMRect, boundaryRect: Boundary): void {
+    let y &#x3D; event.y + event.offsetFromHost.bottom;
+
+    if (boundaryRect) {
+      y &#x3D; Math.max(boundaryRect.top, Math.min(y, boundaryRect.bottom));
+    }
+
+    let height &#x3D; Math.max(this.ngxResizeMinHeight, y - hostElementRect.top);
+
+    if (boundaryRect) {
+      height &#x3D; Math.min(height, boundaryRect.bottom - hostElementRect.top);
+    }
+
+    const initiatorType &#x3D; this.resolveInitiatorType(event.initiator);
+
+    const widthProportions &#x3D; initiatorType ? this.getWidthProportions(boundaryRect, hostElementRect, initiatorType, height) : null;
+
+    if (widthProportions) {
+      height &#x3D; Math.min(height, this.fromWidthProportion(widthProportions.width));
+    }
+
+    this.updateHostStyle(&#x27;height&#x27;, &#x60;${height}px&#x60;);
+
+    if (widthProportions) {
+      this.updateHostStyle(&#x27;left&#x27;, &#x60;${this.basedOnBoundary(widthProportions.left, &#x27;left&#x27;)}px&#x60;);
+      this.updateHostStyle(&#x27;width&#x27;, &#x60;${widthProportions.width}px&#x60;);
+    }
+
+    this.emitResize(event.nativeEvent);
+  }
+
+  private leftMovement(event: Movement, hostElementRect: DOMRect, boundaryRect: Boundary): void {
+    let x &#x3D; event.x - event.offsetFromHost.left;
+
+    if (boundaryRect) {
+      x &#x3D; Math.max(boundaryRect.left, Math.min(x, boundaryRect.right));
+    }
+
+    let left &#x3D; Math.min(x, hostElementRect.right - this.ngxResizeMinWidth);
+    let width &#x3D; hostElementRect.width - (left - hostElementRect.left);
+
+    const initiatorType &#x3D; this.resolveInitiatorType(event.initiator);
+
+    const heightProportions &#x3D; initiatorType ? this.getHeightProportions(boundaryRect, hostElementRect, initiatorType, width) : null;
+
+    if (heightProportions) {
+      left &#x3D; left + (width - this.fromHeightProportion(heightProportions.height));
+      width &#x3D; Math.min(width, this.fromHeightProportion(heightProportions.height));
+    }
+
+    this.updateHostStyle(&#x27;left&#x27;, &#x60;${this.basedOnBoundary(left, &#x27;left&#x27;)}px&#x60;);
+    this.updateHostStyle(&#x27;width&#x27;, &#x60;${width}px&#x60;);
+
+    if (heightProportions) {
+      this.updateHostStyle(&#x27;top&#x27;, &#x60;${this.basedOnBoundary(heightProportions.top, &#x27;top&#x27;)}px&#x60;);
+      this.updateHostStyle(&#x27;height&#x27;, &#x60;${heightProportions.height}px&#x60;);
+    }
+
+    this.emitResize(event.nativeEvent);
+  }
+
+  /**
+   * Get position and size of width
+   */
+  private getWidthProportions(
+    boundaryRect: Boundary,
+    hostElementRect: DOMRect,
+    type: NgxResizeHandleType,
+    height: number
+  ): {
+    left: number;
+    width: number;
+  } | null {
+    let width &#x3D; this.fromHeightProportion(height);
+
+    if (!width) {
+      return null;
+    }
+
+    if (type !&#x3D;&#x3D; NgxResizeHandleType.TopLeft &amp;&amp; type !&#x3D;&#x3D; NgxResizeHandleType.BottomLeft) {
+      width &#x3D; boundaryRect ? Math.min(width, boundaryRect.right - hostElementRect.left) : width;
+    }
+
+    if (type !&#x3D;&#x3D; NgxResizeHandleType.TopRight &amp;&amp; type !&#x3D;&#x3D; NgxResizeHandleType.BottomRight) {
+      width &#x3D; boundaryRect ? Math.min(width, hostElementRect.right - boundaryRect.left) : width;
+    }
+
+    let left &#x3D; hostElementRect.left;
+
+    if (type &#x3D;&#x3D;&#x3D; NgxResizeHandleType.TopLeft || type &#x3D;&#x3D;&#x3D; NgxResizeHandleType.BottomLeft) {
+      left &#x3D; left - (width - hostElementRect.width);
+    }
+
+    if (type &#x3D;&#x3D;&#x3D; NgxResizeHandleType.Top || type &#x3D;&#x3D;&#x3D; NgxResizeHandleType.Bottom) {
+      left &#x3D; left - (width - hostElementRect.width) / 2;
+    }
+
+    return { left, width };
+  }
+
+  /**
+   * Get position and size of height
+   */
+  private getHeightProportions(
+    boundaryRect: Boundary,
+    hostElementRect: DOMRect,
+    type: NgxResizeHandleType,
+    width: number
+  ): {
+    top: number;
+    height: number;
+  } | null {
+    let height &#x3D; this.fromWidthProportion(width);
+
+    if (!height) {
+      return null;
+    }
+
+    if (type !&#x3D;&#x3D; NgxResizeHandleType.TopLeft &amp;&amp; type !&#x3D;&#x3D; NgxResizeHandleType.TopRight) {
+      height &#x3D; boundaryRect ? Math.min(height, boundaryRect.bottom - hostElementRect.top) : height;
+    }
+
+    if (type !&#x3D;&#x3D; NgxResizeHandleType.BottomLeft &amp;&amp; type !&#x3D;&#x3D; NgxResizeHandleType.BottomRight) {
+      height &#x3D; boundaryRect ? Math.min(height, hostElementRect.bottom - boundaryRect.top) : height;
+    }
+
+    let top &#x3D; hostElementRect.top;
+
+    if (type &#x3D;&#x3D;&#x3D; NgxResizeHandleType.TopLeft || type &#x3D;&#x3D;&#x3D; NgxResizeHandleType.TopRight) {
+      top &#x3D; top - (height - hostElementRect.height);
+    }
+
+    if (type &#x3D;&#x3D;&#x3D; NgxResizeHandleType.Left || type &#x3D;&#x3D;&#x3D; NgxResizeHandleType.Right) {
+      top &#x3D; top - (height - hostElementRect.height) / 2;
+    }
+
+    return { top, height };
+  }
+
+  /**
+   * Get width based on {@link ngxResizeAspectRatio} from height
+   */
+  private fromHeightProportion(height: number): number {
+    return !this.ngxResizeAspectRatio ? 0 : Math.floor((height / this.ngxResizeAspectRatio) * 100);
+  }
+
+  /**
+   * Get height based on {@link ngxResizeAspectRatio} from width
+   */
+  private fromWidthProportion(width: number): number {
+    return !this.ngxResizeAspectRatio ? 0 : Math.floor((width * this.ngxResizeAspectRatio) / 100);
+  }
+
+  /**
+   * Updates host element style
+   */
+  private updateHostStyle(style: string, value: any): void {
+    this.renderer.setStyle(this.elementRef.nativeElement, style, value);
+  }
+
+  /**
+   * Resolves the type of handle HTML element
+   */
+  private resolveInitiatorType(initiator: HTMLElement): NgxResizeHandleType | null {
+    return initiator.getAttribute(&#x27;data-ngx-resize-handle-type&#x27;) as NgxResizeHandleType;
+  }
+
+  /**
+   * Emits resize event to the {@link ngxResized}
+   */
+  private emitResize(nativeEvent?: Event): void {
+    const rect &#x3D; this.elementRef.nativeElement.getBoundingClientRect();
+
+    this.ngxResized.emit({
+      nativeEvent,
+      top: rect.top,
+      right: rect.right,
+      bottom: rect.bottom,
+      left: rect.left,
+    });
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'NgxResizeDirective.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

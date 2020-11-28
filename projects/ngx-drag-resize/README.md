@@ -68,3 +68,7 @@ You have to style all elements as you want.
 ```
 
 More examples you can find in [demo app](https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize-demo)
+
+## Documentation
+
+[Docs site](https://dmytro-parfenov.github.io/ngx-drag-resize/)

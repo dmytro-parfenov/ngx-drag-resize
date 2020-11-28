@@ -1,0 +1,13 @@
+{
+  "$schema": "../../node_modules/@compodoc/compodoc/src/config/schema.json",
+  "output": "../../docs",
+  "tsconfig": "tsconfig.lib.prod.json",
+  "disableDependencies": true,
+  "disablePrivate": true,
+  "disableProtected": true,
+  "disableLifeCycleHooks": true,
+  "disableInternal": true,
+  "hideGenerator": true,
+  "language": "en-US",
+  "disableCoverage": true
+}

@@ -6,6 +6,8 @@ import {Boundary} from './boundary';
  *
  * @author Dmytro Parfenov <dmitryparfenov937@gmail.com>
  *
+ * @internal
+ *
  * @dynamic
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */

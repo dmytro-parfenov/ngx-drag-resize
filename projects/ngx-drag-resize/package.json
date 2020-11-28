@@ -13,6 +13,9 @@
     "email": "dmitryparfenov937@gmail.com",
     "name": "Dmytro Parfenov"
   },
+  "scripts": {
+    "compodoc": "npx compodoc"
+  },
   "peerDependencies": {
     "@angular/common": "^11.0.1",
     "@angular/core": "^11.0.1"
