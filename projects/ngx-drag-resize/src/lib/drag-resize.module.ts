@@ -22,4 +22,4 @@ import {SharedModule} from './shared/shared.module';
   ],
   exports: [NgxDragDirective, NgxDragHandleDirective, NgxResizeDirective, NgxResizeHandleDirective]
 })
-export class NgxDragAndResizeModule { }
+export class NgxDragResizeModule { }

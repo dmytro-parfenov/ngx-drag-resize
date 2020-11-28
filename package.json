@@ -1,16 +1,16 @@
 {
-  "name": "ngx-drag-and-resize",
+  "name": "ngx-drag-resize",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "watch:lib": "ng run ngx-drag-and-resize:build --watch",
-    "build:lib": "ng run ngx-drag-and-resize:build:production",
-    "test:lib": "ng run ngx-drag-and-resize:test",
-    "lint:lib": "ng run ngx-drag-and-resize:lint",
-    "start:demo": "ng run ngx-drag-and-resize-demo:serve --host 0.0.0.0 -o --disable-host-check",
-    "build:demo": "ng run ngx-drag-and-resize-demo:build:production",
-    "test:demo": "ng run ngx-drag-and-resize-demo:test",
-    "lint:demo": "ng run ngx-drag-and-resize-demo:lint"
+    "watch:lib": "ng run ngx-drag-resize:build --watch",
+    "build:lib": "ng run ngx-drag-resize:build:production",
+    "test:lib": "ng run ngx-drag-resize:test",
+    "lint:lib": "ng run ngx-drag-resize:lint",
+    "start:demo": "ng run ngx-drag-resize-demo:serve --host 0.0.0.0 -o --disable-host-check",
+    "build:demo": "ng run ngx-drag-resize-demo:build:production",
+    "test:demo": "ng run ngx-drag-resize-demo:test",
+    "lint:demo": "ng run ngx-drag-resize-demo:lint"
   },
   "private": true,
   "dependencies": {

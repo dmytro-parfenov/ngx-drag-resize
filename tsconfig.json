@@ -20,9 +20,9 @@
       "dom"
     ],
     "paths": {
-      "ngx-drag-and-resize": [
-        "dist/ngx-drag-and-resize/ngx-drag-and-resize",
-        "dist/ngx-drag-and-resize"
+      "ngx-drag-resize": [
+        "dist/ngx-drag-resize/ngx-drag-resize",
+        "dist/ngx-drag-resize"
       ]
     }
   },

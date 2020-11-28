@@ -3,10 +3,10 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-drag-and-resize": {
+    "ngx-drag-resize": {
       "projectType": "library",
-      "root": "projects/ngx-drag-and-resize",
-      "sourceRoot": "projects/ngx-drag-and-resize/src",
+      "root": "projects/ngx-drag-resize",
+      "sourceRoot": "projects/ngx-drag-resize/src",
       "prefix": "ngx",
       "schematics": {
         "@schematics/angular:component": {
@@ -40,29 +40,29 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ngx-drag-and-resize/tsconfig.lib.json",
-            "project": "projects/ngx-drag-and-resize/ng-package.json"
+            "tsConfig": "projects/ngx-drag-resize/tsconfig.lib.json",
+            "project": "projects/ngx-drag-resize/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-drag-and-resize/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-drag-resize/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-drag-and-resize/src/test.ts",
-            "tsConfig": "projects/ngx-drag-and-resize/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-drag-and-resize/karma.conf.js"
+            "main": "projects/ngx-drag-resize/src/test.ts",
+            "tsConfig": "projects/ngx-drag-resize/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-drag-resize/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-drag-and-resize/tsconfig.lib.json",
-              "projects/ngx-drag-and-resize/tsconfig.spec.json"
+              "projects/ngx-drag-resize/tsconfig.lib.json",
+              "projects/ngx-drag-resize/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -71,7 +71,7 @@
         }
       }
     },
-    "ngx-drag-and-resize-demo": {
+    "ngx-drag-resize-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -101,25 +101,25 @@
           "skipTests": true
         }
       },
-      "root": "projects/ngx-drag-and-resize-demo",
-      "sourceRoot": "projects/ngx-drag-and-resize-demo/src",
+      "root": "projects/ngx-drag-resize-demo",
+      "sourceRoot": "projects/ngx-drag-resize-demo/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-drag-and-resize-demo",
-            "index": "projects/ngx-drag-and-resize-demo/src/index.html",
-            "main": "projects/ngx-drag-and-resize-demo/src/main.ts",
-            "polyfills": "projects/ngx-drag-and-resize-demo/src/polyfills.ts",
-            "tsConfig": "projects/ngx-drag-and-resize-demo/tsconfig.app.json",
+            "outputPath": "dist/ngx-drag-resize-demo",
+            "index": "projects/ngx-drag-resize-demo/src/index.html",
+            "main": "projects/ngx-drag-resize-demo/src/main.ts",
+            "polyfills": "projects/ngx-drag-resize-demo/src/polyfills.ts",
+            "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/ngx-drag-and-resize-demo/src/favicon.ico",
-              "projects/ngx-drag-and-resize-demo/src/assets"
+              "projects/ngx-drag-resize-demo/src/favicon.ico",
+              "projects/ngx-drag-resize-demo/src/assets"
             ],
             "styles": [
-              "projects/ngx-drag-and-resize-demo/src/styles.scss"
+              "projects/ngx-drag-resize-demo/src/styles.scss"
             ],
             "scripts": []
           },
@@ -127,8 +127,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ngx-drag-and-resize-demo/src/environments/environment.ts",
-                  "with": "projects/ngx-drag-and-resize-demo/src/environments/environment.prod.ts"
+                  "replace": "projects/ngx-drag-resize-demo/src/environments/environment.ts",
+                  "with": "projects/ngx-drag-resize-demo/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -156,33 +156,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-drag-and-resize-demo:build"
+            "browserTarget": "ngx-drag-resize-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-drag-and-resize-demo:build:production"
+              "browserTarget": "ngx-drag-resize-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-drag-and-resize-demo:build"
+            "browserTarget": "ngx-drag-resize-demo:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-drag-and-resize-demo/src/test.ts",
-            "polyfills": "projects/ngx-drag-and-resize-demo/src/polyfills.ts",
-            "tsConfig": "projects/ngx-drag-and-resize-demo/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-drag-and-resize-demo/karma.conf.js",
+            "main": "projects/ngx-drag-resize-demo/src/test.ts",
+            "polyfills": "projects/ngx-drag-resize-demo/src/polyfills.ts",
+            "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-drag-resize-demo/karma.conf.js",
             "assets": [
-              "projects/ngx-drag-and-resize-demo/src/favicon.ico",
-              "projects/ngx-drag-and-resize-demo/src/assets"
+              "projects/ngx-drag-resize-demo/src/favicon.ico",
+              "projects/ngx-drag-resize-demo/src/assets"
             ],
             "styles": [
-              "projects/ngx-drag-and-resize-demo/src/styles.scss"
+              "projects/ngx-drag-resize-demo/src/styles.scss"
             ],
             "scripts": []
           }
@@ -191,9 +191,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-drag-and-resize-demo/tsconfig.app.json",
-              "projects/ngx-drag-and-resize-demo/tsconfig.spec.json",
-              "projects/ngx-drag-and-resize-demo/e2e/tsconfig.json"
+              "projects/ngx-drag-resize-demo/tsconfig.app.json",
+              "projects/ngx-drag-resize-demo/tsconfig.spec.json",
+              "projects/ngx-drag-resize-demo/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -203,17 +203,17 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/ngx-drag-and-resize-demo/e2e/protractor.conf.js",
-            "devServerTarget": "ngx-drag-and-resize-demo:serve"
+            "protractorConfig": "projects/ngx-drag-resize-demo/e2e/protractor.conf.js",
+            "devServerTarget": "ngx-drag-resize-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-drag-and-resize-demo:serve:production"
+              "devServerTarget": "ngx-drag-resize-demo:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "ngx-drag-and-resize"
+  "defaultProject": "ngx-drag-resize"
 }

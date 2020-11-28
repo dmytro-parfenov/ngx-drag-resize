@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {NgxHandleType} from 'ngx-drag-and-resize';
+import {Component} from '@angular/core';
+import {NgxHandleType} from 'ngx-drag-resize';
 
 @Component({
   selector: 'app-root',

@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {NgxDragAndResizeModule} from 'ngx-drag-and-resize';
+import {NgxDragResizeModule} from 'ngx-drag-resize';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import {NgxDragAndResizeModule} from 'ngx-drag-and-resize';
   ],
   imports: [
     BrowserModule,
-    NgxDragAndResizeModule
+    NgxDragResizeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
