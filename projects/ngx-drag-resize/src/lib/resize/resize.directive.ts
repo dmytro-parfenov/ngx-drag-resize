@@ -25,7 +25,7 @@ import {Movement} from '../core/movement/movement';
 import {PositionBase} from '../core/position-base';
 import {Boundary} from '../shared/boundary/boundary';
 import {Scale} from './scale';
-import {NgxHandleType} from './handle-type.enum';
+import {NgxResizeHandleType} from './resize-handle-type.enum';
 
 /**
  * The directive that allows to resize HTML element on page
@@ -485,18 +485,18 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   /**
    * Check whether is resize is available for current initiator type
    */
-  private canResize(initiatorType: NgxHandleType): boolean {
+  private canResize(initiatorType: NgxResizeHandleType): boolean {
     switch (initiatorType) {
-      case NgxHandleType.TopLeft:
-      case NgxHandleType.TopRight:
-      case NgxHandleType.BottomLeft:
-      case NgxHandleType.BottomRight:
+      case NgxResizeHandleType.TopLeft:
+      case NgxResizeHandleType.TopRight:
+      case NgxResizeHandleType.BottomLeft:
+      case NgxResizeHandleType.BottomRight:
         return !this.ngxResizeLockAxis;
-      case NgxHandleType.Left:
-      case NgxHandleType.Right:
+      case NgxResizeHandleType.Left:
+      case NgxResizeHandleType.Right:
         return this.ngxResizeLockAxis !== 'x';
-      case NgxHandleType.Top:
-      case NgxHandleType.Bottom:
+      case NgxResizeHandleType.Top:
+      case NgxResizeHandleType.Bottom:
         return this.ngxResizeLockAxis !== 'y';
     }
 
@@ -526,21 +526,21 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
     }
 
     switch (initiatorType) {
-      case NgxHandleType.TopLeft:
+      case NgxResizeHandleType.TopLeft:
         return this.topLeftMovement(event, hostElementRect, boundaryRect);
-      case NgxHandleType.Top:
+      case NgxResizeHandleType.Top:
         return this.topMovement(event, hostElementRect, boundaryRect);
-      case NgxHandleType.TopRight:
+      case NgxResizeHandleType.TopRight:
         return this.topRightMovement(event, hostElementRect, boundaryRect);
-      case NgxHandleType.Right:
+      case NgxResizeHandleType.Right:
         return this.rightMovement(event, hostElementRect, boundaryRect);
-      case NgxHandleType.BottomRight:
+      case NgxResizeHandleType.BottomRight:
         return this.bottomRightMovement(event, hostElementRect, boundaryRect);
-      case NgxHandleType.Bottom:
+      case NgxResizeHandleType.Bottom:
         return this.bottomMovement(event, hostElementRect, boundaryRect);
-      case NgxHandleType.BottomLeft:
+      case NgxResizeHandleType.BottomLeft:
         return this.bottomLeftMovement(event, hostElementRect, boundaryRect);
-      case NgxHandleType.Left:
+      case NgxResizeHandleType.Left:
         return this.leftMovement(event, hostElementRect, boundaryRect);
     }
   }
@@ -713,7 +713,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   private getWidthProportions(
     boundaryRect: Boundary,
     hostElementRect: DOMRect,
-    type: NgxHandleType,
+    type: NgxResizeHandleType,
     height: number
   ): {
     left: number;
@@ -725,21 +725,21 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
       return null;
     }
 
-    if (type !== NgxHandleType.TopLeft && type !== NgxHandleType.BottomLeft) {
+    if (type !== NgxResizeHandleType.TopLeft && type !== NgxResizeHandleType.BottomLeft) {
       width = boundaryRect ? Math.min(width, boundaryRect.right - hostElementRect.left) : width;
     }
 
-    if (type !== NgxHandleType.TopRight && type !== NgxHandleType.BottomRight) {
+    if (type !== NgxResizeHandleType.TopRight && type !== NgxResizeHandleType.BottomRight) {
       width = boundaryRect ? Math.min(width, hostElementRect.right - boundaryRect.left) : width;
     }
 
     let left = hostElementRect.left;
 
-    if (type === NgxHandleType.TopLeft || type === NgxHandleType.BottomLeft) {
+    if (type === NgxResizeHandleType.TopLeft || type === NgxResizeHandleType.BottomLeft) {
       left = left - (width - hostElementRect.width);
     }
 
-    if (type === NgxHandleType.Top || type === NgxHandleType.Bottom) {
+    if (type === NgxResizeHandleType.Top || type === NgxResizeHandleType.Bottom) {
       left = left - (width - hostElementRect.width) / 2;
     }
 
@@ -752,7 +752,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   private getHeightProportions(
     boundaryRect: Boundary,
     hostElementRect: DOMRect,
-    type: NgxHandleType,
+    type: NgxResizeHandleType,
     width: number
   ): {
     top: number;
@@ -764,21 +764,21 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
       return null;
     }
 
-    if (type !== NgxHandleType.TopLeft && type !== NgxHandleType.TopRight) {
+    if (type !== NgxResizeHandleType.TopLeft && type !== NgxResizeHandleType.TopRight) {
       height = boundaryRect ? Math.min(height, boundaryRect.bottom - hostElementRect.top) : height;
     }
 
-    if (type !== NgxHandleType.BottomLeft && type !== NgxHandleType.BottomRight) {
+    if (type !== NgxResizeHandleType.BottomLeft && type !== NgxResizeHandleType.BottomRight) {
       height = boundaryRect ? Math.min(height, hostElementRect.bottom - boundaryRect.top) : height;
     }
 
     let top = hostElementRect.top;
 
-    if (type === NgxHandleType.TopLeft || type === NgxHandleType.TopRight) {
+    if (type === NgxResizeHandleType.TopLeft || type === NgxResizeHandleType.TopRight) {
       top = top - (height - hostElementRect.height);
     }
 
-    if (type === NgxHandleType.Left || type === NgxHandleType.Right) {
+    if (type === NgxResizeHandleType.Left || type === NgxResizeHandleType.Right) {
       top = top - (height - hostElementRect.height) / 2;
     }
 
@@ -809,8 +809,8 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   /**
    * Resolves the type of handle HTML element
    */
-  private resolveInitiatorType(initiator: HTMLElement): NgxHandleType | null {
-    return initiator.getAttribute('data-ngx-resize-handle-type') as NgxHandleType;
+  private resolveInitiatorType(initiator: HTMLElement): NgxResizeHandleType | null {
+    return initiator.getAttribute('data-ngx-resize-handle-type') as NgxResizeHandleType;
   }
 
   /**

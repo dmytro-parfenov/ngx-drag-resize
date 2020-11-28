@@ -1,4 +1,4 @@
-export enum NgxHandleType {
+export enum NgxResizeHandleType {
   TopLeft = 'top-left',
   Top = 'top',
   TopRight = 'top-right',

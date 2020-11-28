@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NgxHandleType} from 'ngx-drag-resize';
+import {NgxResizeHandleType} from 'ngx-drag-resize';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,6 @@ import {NgxHandleType} from 'ngx-drag-resize';
 })
 export class AppComponent {
 
-  readonly handleType = NgxHandleType;
+  readonly handleType = NgxResizeHandleType;
 
 }

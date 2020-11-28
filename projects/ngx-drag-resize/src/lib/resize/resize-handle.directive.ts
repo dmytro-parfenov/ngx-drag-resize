@@ -10,7 +10,7 @@ import {
   PLATFORM_ID,
 } from '@angular/core';
 import { isPlatformServer } from '@angular/common';
-import {NgxHandleType} from './handle-type.enum';
+import {NgxResizeHandleType} from './resize-handle-type.enum';
 import {NgxResizeDirective} from './resize.directive';
 
 /**
@@ -30,7 +30,7 @@ export class NgxResizeHandleDirective implements AfterViewInit, OnDestroy {
    */
   @Input('ngxResizeHandle')
   @HostBinding('attr.data-ngx-resize-handle-type')
-  type: NgxHandleType | null = null;
+  type: NgxResizeHandleType | null = null;
 
   constructor(
     private readonly elementRef: ElementRef<HTMLElement>,
