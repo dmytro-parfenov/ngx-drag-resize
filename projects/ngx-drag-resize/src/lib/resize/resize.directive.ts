@@ -17,7 +17,7 @@ import { filter, map, switchMap, takeUntil, tap } from 'rxjs/operators';
 import {BoundaryDirective} from '../shared/boundary/boundary.directive';
 import {Axis} from '../core/axis';
 import {PositionType} from './position-type';
-import {Resize} from './resize';
+import {NgxResize} from './resize';
 import {DragService} from '../core/drag.service';
 import {WINDOW} from '../core/window.token';
 import {MovementBase} from '../core/movement/movement-base';
@@ -168,7 +168,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   /**
    * Emits changes when element was resized
    */
-  @Output() ngxResizeChange = new EventEmitter<Resize>();
+  @Output() ngxResized = new EventEmitter<NgxResize>();
 
   constructor(
     readonly elementRef: ElementRef<HTMLElement>,
@@ -244,15 +244,17 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
             hostElementRect = this.elementRef.nativeElement.getBoundingClientRect();
           }
 
+          const offsetFromHost = {
+            top: event.initial.y - hostElementRect.top,
+            left: event.initial.x - hostElementRect.left,
+            bottom: hostElementRect.bottom - event.initial.y,
+            right: hostElementRect.right - event.initial.x,
+          } as Boundary;
+
           return {
             ...event,
             initiator: target,
-            offsetFromHost: {
-              top: event.initial.y - hostElementRect.top,
-              left: event.initial.x - hostElementRect.left,
-              bottom: hostElementRect.bottom - event.initial.y,
-              right: hostElementRect.right - event.initial.x,
-            } as Boundary,
+            offsetFromHost,
             initial: event.initial,
             nativeEvent: event.nativeEvent,
           };
@@ -814,12 +816,12 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   }
 
   /**
-   * Emits resize event to the {@link ngxResizeChange}
+   * Emits resize event to the {@link ngxResized}
    */
   private emitResize(nativeEvent?: Event): void {
     const rect = this.elementRef.nativeElement.getBoundingClientRect();
 
-    this.ngxResizeChange.emit({
+    this.ngxResized.emit({
       nativeEvent,
       top: rect.top,
       right: rect.right,
