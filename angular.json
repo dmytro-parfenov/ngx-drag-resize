@@ -150,6 +150,9 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "gh-pages": {
+              "deployUrl": "https://dmytro-parfenov.github.io/ngx-drag-resize-demo/"
             }
           }
         },
