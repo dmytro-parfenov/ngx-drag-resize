@@ -6,7 +6,7 @@
 <div class="rect move"
      ngxDrag></div>
 
-<h3>Drag usingx handle</h3>
+<h3>Drag using handle</h3>
 
 <div class="rect"
      ngxDrag>
@@ -91,16 +91,16 @@
   </div>
 </section>
 
-<h3>Resize only by using 'x' mouse wheel or two fingers</h3>
+<h3>Resize only by using mouse wheel or two fingers</h3>
 
-<section class="area" id="resize-area-4">
-  <div class="rect content-inside offset-large"
+<section class="area large" id="resize-area-4">
+  <div class="rect content-inside offset-large large"
        ngxResize
        ngxResizeWheelInitiatorRegExp="ControlLeft|ControlRight"
-       [ngxResizeMinWidth]="90"
-       [ngxResizeMinHeight]="90"
+       [ngxResizeMinWidth]="200"
+       [ngxResizeMinHeight]="200"
        ngxResizeBoundary="#resize-area-4">
-    <span>Ctrl + scroll</span>
+    <span>Ctrl + scroll / Two fingers</span>
   </div>
 </section>
 
