@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "watch:lib": "ng run ngx-drag-resize:build --watch",
-    "build:lib": "ng run ngx-drag-resize:build:production",
-    "test:lib": "ng run ngx-drag-resize:test",
-    "lint:lib": "ng run ngx-drag-resize:lint",
+    "start:lib": "ng run ngx-drag-resize:build --watch",
     "start:demo": "ng run ngx-drag-resize-demo:serve --host 0.0.0.0 -o --disable-host-check",
-    "build:demo": "ng run ngx-drag-resize-demo:build:production",
+    "test:lib": "ng run ngx-drag-resize:test",
     "test:demo": "ng run ngx-drag-resize-demo:test",
-    "lint:demo": "ng run ngx-drag-resize-demo:lint"
+    "lint:lib": "ng run ngx-drag-resize:lint",
+    "lint:demo": "ng run ngx-drag-resize-demo:lint",
+    "build:lib:prod": "ng run ngx-drag-resize:build:production",
+    "build:demo:prod": "ng run ngx-drag-resize-demo:build:production",
+    "build:lib-and-demo:prod": "npm run build:lib:prod && npm run build:demo:prod"
   },
   "private": true,
   "dependencies": {
