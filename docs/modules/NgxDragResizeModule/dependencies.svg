@@ -24,13 +24,13 @@
 <title>cluster_NgxDragResizeModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 689,-268 689,-70 8,-70"/>
 </g>
-<g id="clust2" class="cluster">
-<title>cluster_NgxDragResizeModule_declarations</title>
-<polygon fill="none" stroke="black" points="25,-78 25,-130 675,-130 675,-78 25,-78"/>
-</g>
 <g id="clust8" class="cluster">
 <title>cluster_NgxDragResizeModule_exports</title>
 <polygon fill="none" stroke="black" points="16,-208 16,-260 681,-260 681,-208 16,-208"/>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_NgxDragResizeModule_declarations</title>
+<polygon fill="none" stroke="black" points="25,-78 25,-130 675,-130 675,-78 25,-78"/>
 </g>
 <!-- NgxDragDirective -->
 <g id="node1" class="node">
