@@ -2,6 +2,9 @@ import {NgModule} from '@angular/core';
 import {BoundaryDirective} from './boundary/boundary.directive';
 
 
+/**
+ * @internal
+ */
 @NgModule({
   declarations: [
     BoundaryDirective
