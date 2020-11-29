@@ -133,7 +133,7 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
     let eventInitial: PositionBase | null = null;
 
     this.dragService
-      .createObserver(target)
+      .fromElement(target)
       .pipe(
         tap((event) => event.nativeEvent.preventDefault()),
         map<MovementBase, Movement>((event) => {

@@ -230,7 +230,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
     let eventInitial: PositionBase | null = null;
 
     const subscription$ = this.dragService
-      .createObserver(target)
+      .fromElement(target)
       .pipe(
         tap((event) => event.nativeEvent.preventDefault()),
         tap((event) => event.nativeEvent.stopImmediatePropagation()),

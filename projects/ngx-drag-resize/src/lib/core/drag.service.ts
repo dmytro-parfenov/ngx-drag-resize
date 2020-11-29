@@ -43,9 +43,9 @@ export class DragService {
   ) {}
 
   /**
-   * Starts observing the HTML element drag event
+   * Creates an observable that emits drag event
    */
-  createObserver(target: HTMLElement): Observable<MovementBase> {
+  fromElement(target: HTMLElement): Observable<MovementBase> {
     if (!this.document) {
       return EMPTY;
     }
