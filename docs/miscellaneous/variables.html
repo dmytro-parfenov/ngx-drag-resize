@@ -63,9 +63,6 @@
                         <li>
                             <a href="#require" title="src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
                         </li>
-                        <li>
-                            <a href="#WINDOW" title="src/lib/core/window.token.ts"><b>WINDOW</b>&nbsp;&nbsp;&nbsp;(src/.../window.token.ts)</a>
-                        </li>
                     </ul>
                 </td>
             </tr>
@@ -115,40 +112,6 @@
                         </td>
                     </tr>
 
-
-            </tbody>
-        </table>
-</section>
-    <h3>src/lib/core/window.token.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="WINDOW"></a>
-                        <span class="name">
-                            <b>
-                            WINDOW</b>
-                            <a href="#WINDOW"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new InjectionToken&lt;Window | null&gt;(&#x27;lib.window&#x27;, {
-  factory: () &#x3D;&gt; (typeof window !&#x3D;&#x3D; &#x27;undefined&#x27; ? window : null)
-})</code>
-                        </td>
-                    </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>A DI Token representing the window object.</p>
-<p>Note: might not be available in the Application Context when Application and Rendering
-Contexts are not the same (e.g. when running the application in a Web Worker or Server).</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
