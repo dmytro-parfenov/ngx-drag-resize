@@ -1,20 +1,24 @@
 import {Component, DebugElement} from '@angular/core';
-import {TestBed} from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {NgxResizeDirective} from './resize.directive';
+import {PositionType} from './position-type';
 
 @Component({
   template: `
-    <div ngxResize></div>
+    <div ngxResize [ngxResizePosition]="position"></div>
   `
 })
-class TestComponent { }
+class TestComponent {
+  position: PositionType = 'absolute';
+}
 
 describe('NgxResizeDirective', () => {
   let debugElement: DebugElement;
+  let fixture: ComponentFixture<TestComponent>;
 
   beforeEach(() => {
-    const fixture = TestBed.configureTestingModule({
+    fixture = TestBed.configureTestingModule({
       declarations: [ NgxResizeDirective, TestComponent ]
     }).createComponent(TestComponent);
 
@@ -25,5 +29,20 @@ describe('NgxResizeDirective', () => {
 
   it('should be created', () => {
     expect(debugElement).toBeTruthy();
+  });
+
+  it('should update position', () => {
+    fixture.componentInstance.position = 'fixed';
+    fixture.detectChanges();
+
+    const result = debugElement.nativeElement.style.position;
+
+    expect(result).toBe('fixed');
+  });
+
+  it('should not throw on observe', () => {
+    const element = document.createElement('div');
+
+    expect(() => { debugElement.injector.get(NgxResizeDirective).observe(element); }).not.toThrow();
   });
 });

@@ -29,5 +29,8 @@ describe('NgxDragDirective', () => {
 
   it('should not throw on observe', () => {
     expect(() => { debugElement.injector.get(NgxDragDirective).observe(); }).not.toThrow();
+
+    const element = document.createElement('div');
+    expect(() => { debugElement.injector.get(NgxDragDirective).observe(element); }).not.toThrow();
   });
 });
