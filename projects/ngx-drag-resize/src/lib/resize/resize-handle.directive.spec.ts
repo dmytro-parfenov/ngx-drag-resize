@@ -27,7 +27,7 @@ describe('NgxResizeHandleDirective', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(debugElement).toBeTruthy();
   });
 
