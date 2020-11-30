@@ -28,10 +28,10 @@
     "build:lib:prod": "npm run test:lib && ng run ngx-drag-resize:build:production",
     "build:demo:prod": "npm run build:lib:prod && npm run test:demo && ng run ngx-drag-resize-demo:build:production",
     "build:demo:prod-gh-pages": "npm run build:lib:prod && npm run test:demo && ng run ngx-drag-resize-demo:build:production,gh-pages",
-    "docs:lib": "npm run compodoc --prefix projects/ngx-drag-resize",
-    "lib:version:major": "npm run version:major --prefix projects/ngx-drag-resize",
-    "lib:version:minor": "npm run version:minor --prefix projects/ngx-drag-resize",
-    "lib:version:patch": "npm run version:patch --prefix projects/ngx-drag-resize"
+    "docs:lib": "npm run test:lib && npm run compodoc --prefix projects/ngx-drag-resize",
+    "lib:version:major": "npm run test:lib && npm run version:major --prefix projects/ngx-drag-resize",
+    "lib:version:minor": "npm run test:lib && npm run version:minor --prefix projects/ngx-drag-resize",
+    "lib:version:patch": "npm run test:lib && npm run version:patch --prefix projects/ngx-drag-resize"
   },
   "private": true,
   "dependencies": {
