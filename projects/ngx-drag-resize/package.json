@@ -7,7 +7,7 @@
     "drag",
     "resize"
   ],
-  "homepage": "https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize",
+  "homepage": "https://github.com/dmytro-parfenov/ngx-drag-resize",
   "bugs": {
     "email": "dmitryparfenov937@gmail.com",
     "url": "https://github.com/dmytro-parfenov/ngx-drag-resize/issues"

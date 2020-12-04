@@ -70,7 +70,3 @@ More examples you can find in [demo app](https://github.com/dmytro-parfenov/ngx-
 ## Documentation
 
 [Docs site](https://dmytro-parfenov.github.io/ngx-drag-resize/)
-
-## Contributing
-
-[Development repository](https://github.com/dmytro-parfenov/ngx-drag-resize)
