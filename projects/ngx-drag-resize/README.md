@@ -6,7 +6,7 @@ The Angular library provides opportunity to use drag and resize functionality on
  
 ## Install
 
-NPM: `npm install ngx-drag-resize`
+NPM: `npm install ngx-drag-resize --save`
 
 Yarn: `yarn add ngx-drag-resize`
 
