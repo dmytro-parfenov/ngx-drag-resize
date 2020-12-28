@@ -1,3 +1,5 @@
+$medium-rect: 200px;
+
 .app-title {
   a {
     color: #ffffff;
@@ -25,6 +27,11 @@ main {
     border-radius: 3px;
     box-shadow: inset 0 0 1px darkgrey, 0 0 2px rgba(0,0,0,0.8);
     background: #ffffff;
+
+    &.medium {
+      height: $medium-rect;
+      width: $medium-rect;
+    }
 
     &.large {
       height: 250px;
@@ -138,5 +145,10 @@ main {
   .offset-large {
     left: 100px;
     top: 50px;
+  }
+
+  .offset-center-medium {
+    left: calc(50% - #{$medium-rect / 2});
+    top: calc(50% - #{$medium-rect / 2});
   }
 }
