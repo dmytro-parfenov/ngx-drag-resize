@@ -1,0 +1,116 @@
+version: 2.1
+
+# Default workspace location
+workspace_location: &workspace_location ~/
+
+executors:
+  default-executor:
+    docker:
+      - image: circleci/node:10-browsers
+    working_directory: ~/ngx-drag-resize
+
+commands:
+  default_attach_workspace:
+    description: Attach workspace at a predefined location
+    steps:
+      - attach_workspace:
+          at: *workspace_location
+
+jobs:
+  setup:
+    executor: default-executor
+    steps:
+      - checkout
+      - restore_cache:
+          key: ngx-drag-resize-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install dependencies
+          command: npm install
+      - save_cache:
+          key: ngx-drag-resize-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+      - persist_to_workspace:
+          root: *workspace_location
+          paths:
+            - ./
+  lint-lib:
+    executor: default-executor
+    steps:
+      - default_attach_workspace
+      - run:
+          name: Lint library
+          command:  npm run lint:lib
+  lint-demo:
+    executor: default-executor
+    steps:
+      - default_attach_workspace
+      - run:
+          name: Lint demo
+          command: npm run lint:demo
+  test-lib:
+    executor: default-executor
+    steps:
+      - default_attach_workspace
+      - run:
+          name: Test library
+          command: npm run test:lib:ci
+  test-demo:
+    executor: default-executor
+    steps:
+      - default_attach_workspace
+      - run:
+          name: Test demo
+          command: npm run test:demo:ci
+  build-lib:
+    executor: default-executor
+    steps:
+      - default_attach_workspace
+      - run:
+          name: Build library
+          command: npm run build:lib:prod
+      - persist_to_workspace:
+          root: *workspace_location
+          paths:
+            - ./
+  build-demo:
+    executor: default-executor
+    steps:
+      - default_attach_workspace
+      - run:
+          name: Build demo
+          command: npm run build:demo:prod
+  build-docs:
+    executor: default-executor
+    steps:
+      - default_attach_workspace
+      - run:
+          name: Build docs
+          command: npm run docs:lib
+
+
+workflows:
+  default_workflow:
+    jobs:
+      - setup
+      - lint-lib:
+          requires:
+            - setup
+      - lint-demo:
+          requires:
+            - setup
+      - test-lib:
+          requires:
+            - setup
+      - build-lib:
+          requires:
+            - setup
+      - test-demo:
+          requires:
+            - build-lib
+      - build-demo:
+          requires:
+            - build-lib
+      - build-docs:
+          requires:
+            - setup
