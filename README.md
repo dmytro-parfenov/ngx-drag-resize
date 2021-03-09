@@ -2,6 +2,8 @@
 
 The project contains Angular library [ngx-drag-resize](https://www.npmjs.com/package/ngx-drag-resize) that provides opportunity to use drag and resize functionality on HTML element
 
+[![CircleCI](https://img.shields.io/circleci/build/github/dmytro-parfenov/ngx-drag-resize)](https://app.circleci.com/pipelines/github/dmytro-parfenov/ngx-drag-resize?branch=master)
+
 # Getting Started
 
 ## Structure
