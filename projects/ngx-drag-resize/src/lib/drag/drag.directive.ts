@@ -262,8 +262,8 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   private emitDrag(nativeEvent?: Event): void {
     const rect = this.elementRef.nativeElement.getBoundingClientRect();
     const positionBasedOnBoundary = {
-      top: this.basedOnBoundary(rect.top, "top"),
-      left: this.basedOnBoundary(rect.left, "left")
+      top: this.basedOnBoundary(rect.top, 'top'),
+      left: this.basedOnBoundary(rect.left, 'left')
     }
 
     this.ngxDragged.emit({
