@@ -43,17 +43,17 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   /**
    * Emits when directive was destroyed
    */
-  private destroy$ = new Subject();
+  private destroy$ = new Subject<void>();
 
   /**
    * Emits next every time when behaviour for wheel event was changed
    */
-  private wheelBehaviourChange$ = new Subject();
+  private wheelBehaviourChange$ = new Subject<void>();
 
   /**
    * Emits next every time when behaviour for touches event was changed
    */
-  private touchBehaviourChange$ = new Subject();
+  private touchBehaviourChange$ = new Subject<void>();
 
   /**
    * An array of observers which affect on resizable element
@@ -502,7 +502,6 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
         return this.ngxResizeLockAxis !== 'y';
     }
 
-    return !this.ngxResizeLockAxis;
   }
 
   /**

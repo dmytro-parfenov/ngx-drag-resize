@@ -111,7 +111,7 @@
             "outputPath": "dist/ngx-drag-resize-demo",
             "index": "projects/ngx-drag-resize-demo/src/index.html",
             "main": "projects/ngx-drag-resize-demo/src/main.ts",
-            "polyfills": "projects/ngx-drag-resize-demo/src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.app.json",
             "aot": true,
             "assets": [
@@ -174,7 +174,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/ngx-drag-resize-demo/src/test.ts",
-            "polyfills": "projects/ngx-drag-resize-demo/src/polyfills.ts",
+            "polyfills": ["zone.js"],
             "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-drag-resize-demo/karma.conf.js",
             "assets": [

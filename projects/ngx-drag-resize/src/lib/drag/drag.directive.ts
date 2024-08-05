@@ -48,12 +48,12 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   /**
    * Emits when directive was destroyed
    */
-  private destroy$ = new Subject();
+  private destroy$ = new Subject<void>();
 
   /**
    * Emits when observable target was changed
    */
-  private observableTargetChange$ = new Subject();
+  private observableTargetChange$ = new Subject<void>();
 
   /**
    * Define positioning strategy.

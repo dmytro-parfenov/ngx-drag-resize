@@ -24,23 +24,26 @@ export class DragService {
   /**
    * Emits on mouse or touch event was ended
    */
-  private readonly leave$ = merge(
-    fromEvent<MovementNative>(this.document, 'mouseup'),
-    fromEvent<MovementNative>(this.document, 'touchend')
-  );
+  private readonly leave$: Observable<MovementNative>
 
   /**
    * Emits on mouse or touch move
    */
-  private readonly move$ = merge(
-    fromEvent<MovementNative>(this.document, 'mousemove'),
-    fromEvent<MovementNative>(this.document, 'touchmove')
-  );
+  private readonly move$: Observable<MovementNative> 
 
   constructor(
     @Inject(DOCUMENT) private readonly document: Document,
     @Inject(WINDOW) private readonly window: Window
-  ) {}
+  ) {
+    this.leave$  = merge(
+      fromEvent<MovementNative>(this.document, 'mouseup'),
+      fromEvent<MovementNative>(this.document, 'touchend')
+    );
+    this.move$ = merge(
+      fromEvent<MovementNative>(this.document, 'mousemove'),
+      fromEvent<MovementNative>(this.document, 'touchmove')
+    );
+  }
 
   /**
    * Creates an observable that emits drag event
