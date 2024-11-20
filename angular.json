@@ -26,8 +26,7 @@
         "@schematics/angular:interceptor": {
           "skipTests": true
         },
-        "@schematics/angular:module": {
-        },
+        "@schematics/angular:module": {},
         "@schematics/angular:pipe": {
           "skipTests": true
         },
@@ -57,14 +56,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-drag-resize/tsconfig.lib.json",
-              "projects/ngx-drag-resize/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ngx-drag-resize/**/*.ts",
+              "projects/ngx-drag-resize/**/*.html"
             ]
           }
         }
@@ -90,8 +86,7 @@
         "@schematics/angular:interceptor": {
           "skipTests": true
         },
-        "@schematics/angular:module": {
-        },
+        "@schematics/angular:module": {},
         "@schematics/angular:pipe": {
           "skipTests": true
         },
@@ -192,15 +187,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-drag-resize-demo/tsconfig.app.json",
-              "projects/ngx-drag-resize-demo/tsconfig.spec.json",
-              "projects/ngx-drag-resize-demo/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ngx-drag-resize-demo/**/*.ts",
+              "projects/ngx-drag-resize-demo/**/*.html"
             ]
           }
         },
@@ -220,6 +211,9 @@
     }
   },
   "cli": {
-    "analytics": "fc316f80-6660-432d-abf8-2ab0fefeadd5"
+    "analytics": "fc316f80-6660-432d-abf8-2ab0fefeadd5",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
