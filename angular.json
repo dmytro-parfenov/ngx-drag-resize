@@ -27,7 +27,6 @@
           "skipTests": true
         },
         "@schematics/angular:module": {
-          "skipTests": true
         },
         "@schematics/angular:pipe": {
           "skipTests": true
@@ -92,7 +91,6 @@
           "skipTests": true
         },
         "@schematics/angular:module": {
-          "skipTests": true
         },
         "@schematics/angular:pipe": {
           "skipTests": true
@@ -113,7 +111,6 @@
             "main": "projects/ngx-drag-resize-demo/src/main.ts",
             "polyfills": "projects/ngx-drag-resize-demo/src/polyfills.ts",
             "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/ngx-drag-resize-demo/src/favicon.ico",
               "projects/ngx-drag-resize-demo/src/assets"
@@ -121,7 +118,13 @@
             "styles": [
               "projects/ngx-drag-resize-demo/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -151,7 +154,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
