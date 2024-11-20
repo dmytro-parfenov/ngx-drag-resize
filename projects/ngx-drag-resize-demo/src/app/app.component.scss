@@ -148,7 +148,7 @@ main {
   }
 
   .offset-center-medium {
-    left: calc(50% - #{$medium-rect / 2});
-    top: calc(50% - #{$medium-rect / 2});
+    left: calc(50% - calc($medium-rect / 2));
+    top: calc(50% - calc($medium-rect / 2));
   }
 }
