@@ -6,7 +6,7 @@ workspace_location: &workspace_location ~/
 executors:
   default-executor:
     docker:
-      - image: circleci/node:22.11.0-browsers
+      - image: cimg/node:22.11.0-browsers
     working_directory: ~/ngx-drag-resize
 
 commands:
