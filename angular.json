@@ -104,12 +104,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ngx-drag-resize-demo",
+            "outputPath": {
+              "base": "dist/ngx-drag-resize-demo"
+            },
             "index": "projects/ngx-drag-resize-demo/src/index.html",
-            "main": "projects/ngx-drag-resize-demo/src/main.ts",
-            "polyfills": "projects/ngx-drag-resize-demo/src/polyfills.ts",
+            "polyfills": [
+              "projects/ngx-drag-resize-demo/src/polyfills.ts"
+            ],
             "tsConfig": "projects/ngx-drag-resize-demo/tsconfig.app.json",
             "assets": [
               "projects/ngx-drag-resize-demo/src/favicon.ico",
@@ -119,12 +122,11 @@
               "projects/ngx-drag-resize-demo/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/ngx-drag-resize-demo/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -139,8 +141,6 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
