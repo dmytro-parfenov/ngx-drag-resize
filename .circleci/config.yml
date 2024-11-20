@@ -6,7 +6,9 @@ workspace_location: &workspace_location ~/
 executors:
   default-executor:
     docker:
-      - image: cimg/node:22.11.0-browsers
+      - image: cimg/node:latest
+    environment:
+      CHROME_BIN: /usr/bin/google-chrome
     working_directory: ~/ngx-drag-resize
 
 commands:
@@ -40,7 +42,7 @@ jobs:
       - default_attach_workspace
       - run:
           name: Lint library
-          command:  npm run lint:lib
+          command: npm run lint:lib
   lint-demo:
     executor: default-executor
     steps:
