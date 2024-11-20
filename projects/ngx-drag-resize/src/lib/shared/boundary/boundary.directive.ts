@@ -12,7 +12,8 @@ import {Boundary} from './boundary';
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */
 @Directive({
-  selector: '[ngxBoundary]',
+    selector: '[ngxBoundary]',
+    standalone: false
 })
 export class BoundaryDirective {
   /**

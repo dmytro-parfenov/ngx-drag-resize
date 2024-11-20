@@ -19,7 +19,8 @@ import {NgxDragDirective} from './drag.directive';
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */
 @Directive({
-  selector: '[ngxDragHandle]',
+    selector: '[ngxDragHandle]',
+    standalone: false
 })
 export class NgxDragHandleDirective implements AfterViewInit, OnDestroy {
   constructor(

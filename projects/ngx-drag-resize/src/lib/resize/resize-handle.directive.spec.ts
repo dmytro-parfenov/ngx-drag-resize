@@ -5,9 +5,10 @@ import {NgxResizeHandleDirective} from './resize-handle.directive';
 import {NgxResizeHandleType} from './resize-handle-type.enum';
 
 @Component({
-  template: `
+    template: `
     <div [ngxResizeHandle]="resizeHandleType"></div>
-  `
+  `,
+    standalone: false
 })
 class TestComponent {
   resizeHandleType = NgxResizeHandleType.Left;

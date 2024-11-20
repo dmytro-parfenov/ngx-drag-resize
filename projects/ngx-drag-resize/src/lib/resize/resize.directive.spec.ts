@@ -5,9 +5,10 @@ import {NgxResizeDirective} from './resize.directive';
 import {PositionType} from './position-type';
 
 @Component({
-  template: `
+    template: `
     <div ngxResize [ngxResizePosition]="position"></div>
-  `
+  `,
+    standalone: false
 })
 class TestComponent {
   position: PositionType = 'absolute';

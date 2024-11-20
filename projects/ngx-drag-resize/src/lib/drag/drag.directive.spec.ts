@@ -4,9 +4,10 @@ import {By} from '@angular/platform-browser';
 import {NgxDragDirective} from './drag.directive';
 
 @Component({
-  template: `
+    template: `
     <div ngxDrag></div>
-  `
+  `,
+    standalone: false
 })
 class TestComponent { }
 

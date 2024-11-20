@@ -22,7 +22,8 @@ import {NgxResizeDirective} from './resize.directive';
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */
 @Directive({
-  selector: '[ngxResizeHandle]',
+    selector: '[ngxResizeHandle]',
+    standalone: false
 })
 export class NgxResizeHandleDirective implements AfterViewInit, OnDestroy {
   /**
