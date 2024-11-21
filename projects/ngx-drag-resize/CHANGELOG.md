@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.0
+
+- migrate to Angular v19
+
 ## 0.0.6
 
 - update docs
