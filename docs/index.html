@@ -8,13 +8,65 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-	      <link rel="stylesheet" href="./styles/style.css">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
     </head>
     <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="./" class="navbar-brand">ngx-drag-resize documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="./" class="navbar-brand">ngx-drag-resize documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
@@ -23,23 +75,23 @@
 
         <div class="container-fluid main">
            <div class="row main">
-               <div class="hidden-xs menu">
+               <div class="d-none d-md-block menu">
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="ngx-drag-resize">ngx-drag-resize</h1>
+<h1>ngx-drag-resize</h1>
 <p>The Angular library provides opportunity to use drag and resize functionality on HTML element.</p>
-<h2 id="demo">Demo</h2>
+<h2>Demo</h2>
 <p><a href="https://ngx-drag-resize.web.app/">ngx-drag-resize</a></p>
-<h2 id="install">Install</h2>
+<h2>Install</h2>
 <p>NPM: <code>npm install ngx-drag-resize --save</code></p>
 <p>Yarn: <code>yarn add ngx-drag-resize</code></p>
-<h2 id="usage">Usage</h2>
+<h2>Usage</h2>
 <p>Import <code>NgxDragResizeModule</code> to your working module</p>
-<div><pre class="line-numbers"><code class="language-none">import {NgxDragResizeModule} from &#39;ngx-drag-resize&#39;;
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">import {NgxDragResizeModule} from &#39;ngx-drag-resize&#39;;
 
 &#64;NgModule({
   imports: [
@@ -48,14 +100,14 @@
 })
 export class AppModule { }</code></pre></div><p>Use directives in your template</p>
 <p>Simple drag</p>
-<div><pre class="line-numbers"><code class="language-none">&lt;div ngxDrag&gt;drag me&lt;/div&gt;</code></pre></div><p>Initiates only by dragging <code>ngxDragHandle</code></p>
-<div><pre class="line-numbers"><code class="language-none">&lt;div ngxDrag&gt;
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxDrag&gt;drag me&lt;/div&gt;</code></pre></div><p>Initiates only by dragging <code>ngxDragHandle</code></p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxDrag&gt;
   &lt;span&gt;drag me&lt;/span&gt;
   &lt;span ngxDragHandle&gt;handle&lt;/span&gt;
 &lt;/div&gt;</code></pre></div><p>A simple resize will work only by using scroll or two fingers on touch devices</p>
-<div><pre class="line-numbers"><code class="language-none">&lt;div ngxResize&gt;resize me&lt;/div&gt;</code></pre></div><p>Resize using borders.
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxResize&gt;resize me&lt;/div&gt;</code></pre></div><p>Resize using borders.
 You have to style all elements as you want.</p>
-<div><pre class="line-numbers"><code class="language-none">&lt;div ngxResize&gt;
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxResize&gt;
   &lt;span&gt;resize me&lt;/span&gt;
   &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.TopLeft&quot;&gt;&lt;/div&gt;
   &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.Top&quot;&gt;&lt;/div&gt;
@@ -66,7 +118,7 @@ You have to style all elements as you want.</p>
   &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.BottomLeft&quot;&gt;&lt;/div&gt;
   &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.Left&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre></div><p>More examples you can find in <a href="https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize-demo">demo app</a></p>
-<h2 id="documentation">Documentation</h2>
+<h2>Documentation</h2>
 <p><a href="https://dmytro-parfenov.github.io/ngx-drag-resize/">Docs site</a></p>
 
 
@@ -82,14 +134,16 @@ You have to style all elements as you want.</p>
 
 
 
-                   
+
+
+
 
 
 
 
                    </div><div class="search-results">
     <div class="has-results">
-        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
     </div>
     <div class="no-results">
@@ -101,6 +155,15 @@ You have to style all elements as you want.</p>
            </div>
        </div>
 
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
@@ -108,18 +171,30 @@ You have to style all elements as you want.</p>
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
-       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
-       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+
        <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
 
        <script src="./js/libs/bootstrap-native.js"></script>
 
        <script src="./js/libs/es6-shim.min.js"></script>
        <script src="./js/libs/EventDispatcher.js"></script>
        <script src="./js/libs/promise.min.js"></script>
-       <script src="./js/libs/zepto.min.js"></script>
 
        <script src="./js/compodoc.js"></script>
 
