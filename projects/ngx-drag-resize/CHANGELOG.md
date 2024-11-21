@@ -2,6 +2,12 @@
 
 ## 1.0.0
 
+- update peerDependencies
+  - @angular/common: ^19.0.0
+  - @angular/core: ^19.0.0
+
+## 1.0.0
+
 - migrate to Angular v19
 
 ## 0.0.6
