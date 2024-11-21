@@ -26,8 +26,7 @@
     "compodoc": "npx compodoc",
     "version:major": "npm version major",
     "version:minor": "npm version minor",
-    "version:patch": "npm version patch",
-    "publish": "npm publish"
+    "version:patch": "npm version patch"
   },
   "peerDependencies": {
     "@angular/common": "^19.0.0",
