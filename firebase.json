@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/ngx-drag-resize-demo",
+    "public": "dist/ngx-drag-resize-demo/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
