@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 1.0.0
+## 1.0.1
 
 - update peerDependencies
   - @angular/common: ^19.0.0
