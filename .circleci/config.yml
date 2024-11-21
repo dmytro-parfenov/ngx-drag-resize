@@ -18,6 +18,11 @@ commands:
     steps:
       - attach_workspace:
           at: *workspace_location
+  install_chrome:
+    description: Install Google's Chrome browser and ChromeDriver in the node variant image
+    steps:
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
 
 jobs:
   setup:
@@ -54,7 +59,7 @@ jobs:
   test-lib:
     executor: default-executor
     steps:
-      - browser-tools/install-browser-tools
+      - install_chrome
       - default_attach_workspace
       - run:
           name: Test library
@@ -62,7 +67,7 @@ jobs:
   test-demo:
     executor: default-executor
     steps:
-      - browser-tools/install-browser-tools
+      - install_chrome
       - default_attach_workspace
       - run:
           name: Test demo
