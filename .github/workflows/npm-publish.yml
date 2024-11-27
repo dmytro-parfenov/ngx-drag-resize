@@ -3,9 +3,8 @@
 
 name: Node.js Package
 on:
-  push:
-    tags:
-      - '**'
+  release:
+    types: [published]
 jobs:
   publish-package:
     runs-on: ubuntu-latest
