@@ -9,6 +9,7 @@
 ## 1.0.0
 
 - migrate to Angular v19
+- migrate to ESLint
 
 ## 0.0.6
 
