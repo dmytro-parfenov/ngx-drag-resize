@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.0.2
+
+- update dependencies
+  - tslib: ^2.8.1
+
 ## 1.0.1
 
 - update peerDependencies
