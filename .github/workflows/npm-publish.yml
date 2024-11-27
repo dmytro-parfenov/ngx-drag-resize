@@ -3,8 +3,9 @@
 
 name: Node.js Package
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - '**'
 jobs:
   publish-package:
     runs-on: ubuntu-latest
