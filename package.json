@@ -35,8 +35,7 @@
     "lib:version:patch": "npm run version:patch --prefix projects/ngx-drag-resize",
     "prepublish:lib": "npm run lint:lib && npm run test:lib:ci && npm run build:lib:prod",
     "predeploy:demo": "npm run prepublish:lib && npm run lint:demo && npm run test:demo:ci && npm run build:demo:prod",
-    "publish:lib": "npm run prepublish:lib && cd dist/ngx-drag-resize && npm publish",
-    "deploy:demo": "npm run predeploy:demo && firebase deploy"
+    "publish:lib": "npm run prepublish:lib && cd dist/ngx-drag-resize && npm publish"
   },
   "private": true,
   "dependencies": {
