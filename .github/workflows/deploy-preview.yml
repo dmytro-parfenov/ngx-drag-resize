@@ -3,10 +3,6 @@ on:
   pull_request:
     branches:
       - master
-    paths:
-      - 'projects/**'
-      - '!projects/ngx-drag-resize/README.md'
-      - '!projects/ngx-drag-resize/CHANGELOG.md'
 jobs:
   deploy_preview_website:
     runs-on: ubuntu-latest
