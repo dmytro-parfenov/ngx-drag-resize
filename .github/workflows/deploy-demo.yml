@@ -6,10 +6,6 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'projects/**'
-      - '!projects/ngx-drag-resize/README.md'
-      - '!projects/ngx-drag-resize/CHANGELOG.md'
 jobs:
   deploy_live_website:
     runs-on: ubuntu-latest
