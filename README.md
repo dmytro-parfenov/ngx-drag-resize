@@ -4,6 +4,8 @@ The project contains Angular library [ngx-drag-resize](https://www.npmjs.com/pac
 
 [![CircleCI](https://img.shields.io/circleci/build/github/dmytro-parfenov/ngx-drag-resize)](https://app.circleci.com/pipelines/github/dmytro-parfenov/ngx-drag-resize?branch=master)
 
+[![NPM Version](https://img.shields.io/npm/v/ngx-drag-resize)](https://www.npmjs.com/package/ngx-drag-resize)
+
 # Getting Started
 
 ## Structure
@@ -41,7 +43,3 @@ Run `npm run docs:lib` to build the documentation for the library. The build art
 ## Contributing
 
 [Contributing guideline](https://github.com/dmytro-parfenov/ngx-drag-resize/blob/master/CONTRIBUTING.md)
-
-## Further help
-
-To get more help mail to [dmitryparfenov937@gmail.com](mailto:dmitryparfenov937@gmail.com?subject=[GitHub]%20ngx-drag-resize)
