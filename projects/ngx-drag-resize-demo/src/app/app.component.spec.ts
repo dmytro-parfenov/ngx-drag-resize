@@ -1,7 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {NgxDragResizeModule} from 'ngx-drag-resize';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -11,9 +10,8 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         MatToolbarModule,
-        NgxDragResizeModule
-      ],
-      declarations: [ AppComponent ]
+        AppComponent
+      ]
     })
       .compileComponents();
   });

@@ -4,19 +4,22 @@ import {By} from '@angular/platform-browser';
 import {NgxDragDirective} from './drag.directive';
 
 @Component({
-    template: `
+  imports: [
+    NgxDragDirective
+  ],
+  template: `
     <div ngxDrag></div>
-  `,
-    standalone: false
+  `
 })
-class TestComponent { }
+class TestComponent {
+}
 
 describe('NgxDragDirective', () => {
   let debugElement: DebugElement;
 
   beforeEach(() => {
     const fixture = TestBed.configureTestingModule({
-      declarations: [ NgxDragDirective, TestComponent ]
+      imports: [NgxDragDirective, TestComponent]
     }).createComponent(TestComponent);
 
     debugElement = fixture.debugElement.query(By.directive(NgxDragDirective));
@@ -29,9 +32,13 @@ describe('NgxDragDirective', () => {
   });
 
   it('should not throw on observe', () => {
-    expect(() => { debugElement.injector.get(NgxDragDirective).observe(); }).not.toThrow();
+    expect(() => {
+      debugElement.injector.get(NgxDragDirective).observe();
+    }).not.toThrow();
 
     const element = document.createElement('div');
-    expect(() => { debugElement.injector.get(NgxDragDirective).observe(element); }).not.toThrow();
+    expect(() => {
+      debugElement.injector.get(NgxDragDirective).observe(element);
+    }).not.toThrow();
   });
 });

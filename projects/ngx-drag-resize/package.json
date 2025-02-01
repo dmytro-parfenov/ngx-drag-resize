@@ -1,7 +1,7 @@
 {
   "name": "ngx-drag-resize",
   "description": "The Angular library provides opportunity to use drag and resize functionality on HTML element",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "keywords": [
     "angular",
     "ngx",

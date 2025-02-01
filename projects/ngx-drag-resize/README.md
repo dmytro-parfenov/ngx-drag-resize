@@ -14,28 +14,34 @@ Yarn: `yarn add ngx-drag-resize`
 
 ## Usage
 
-Import `NgxDragResizeModule` to your working module
+Ensure your component imports all required directives.
 
 ```
-import {NgxDragResizeModule} from 'ngx-drag-resize';
+import {
+  NgxDragDirective,
+  NgxDragHandleDirective,
+  NgxResizeDirective,
+  NgxResizeHandleDirective
+} from 'ngx-drag-resize';
 
-@NgModule({
-  imports: [
-    NgxDragResizeModule
-  ]
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  imports: [NgxResizeDirective, NgxResizeHandleDirective, NgxDragDirective, NgxDragHandleDirective]
 })
-export class AppModule { }
+export class AppComponent {}
 ```
 
-Use directives in your template
+Use directives within your template.
 
-Simple drag
+_Simple drag._
 
 ```
 <div ngxDrag>drag me</div>
 ```
 
-Initiates only by dragging `ngxDragHandle`
+_Initiates only when dragging handle._
 
 ```
 <div ngxDrag>
@@ -44,14 +50,13 @@ Initiates only by dragging `ngxDragHandle`
 </div>
 ```
 
-A simple resize will work only by using scroll or two fingers on touch devices
+_A simple resize works only via scrolling or using two fingers on touch devices._
 
 ```
 <div ngxResize>resize me</div>
 ```
 
-Resize using borders.
-You have to style all elements as you want.
+_Resize using borders, and style all elements as desired._
 
 ```
 <div ngxResize>
@@ -67,7 +72,7 @@ You have to style all elements as you want.
 </div>
 ```
 
-More examples you can find in [demo app](https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize-demo)
+You can find more examples in the [demo app](https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize-demo)
 
 ## Documentation
 

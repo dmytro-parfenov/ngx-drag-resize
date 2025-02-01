@@ -5,10 +5,12 @@ import {NgxResizeHandleDirective} from './resize-handle.directive';
 import {NgxResizeHandleType} from './resize-handle-type.enum';
 
 @Component({
-    template: `
+  imports: [
+    NgxResizeHandleDirective
+  ],
+  template: `
     <div [ngxResizeHandle]="resizeHandleType"></div>
-  `,
-    standalone: false
+  `
 })
 class TestComponent {
   resizeHandleType = NgxResizeHandleType.Left;
@@ -20,7 +22,7 @@ describe('NgxResizeHandleDirective', () => {
 
   beforeEach(() => {
     fixture = TestBed.configureTestingModule({
-      declarations: [ NgxResizeHandleDirective, TestComponent ]
+      imports: [NgxResizeHandleDirective, TestComponent]
     }).createComponent(TestComponent);
 
     debugElement = fixture.debugElement.query(By.directive(NgxResizeHandleDirective));

@@ -5,10 +5,12 @@ import {NgxResizeDirective} from './resize.directive';
 import {PositionType} from './position-type';
 
 @Component({
-    template: `
+  imports: [
+    NgxResizeDirective
+  ],
+  template: `
     <div ngxResize [ngxResizePosition]="position"></div>
-  `,
-    standalone: false
+  `
 })
 class TestComponent {
   position: PositionType = 'absolute';
@@ -20,7 +22,7 @@ describe('NgxResizeDirective', () => {
 
   beforeEach(() => {
     fixture = TestBed.configureTestingModule({
-      declarations: [ NgxResizeDirective, TestComponent ]
+      imports: [NgxResizeDirective, TestComponent]
     }).createComponent(TestComponent);
 
     debugElement = fixture.debugElement.query(By.directive(NgxResizeDirective));
@@ -44,6 +46,8 @@ describe('NgxResizeDirective', () => {
   it('should not throw on observe', () => {
     const element = document.createElement('div');
 
-    expect(() => { debugElement.injector.get(NgxResizeDirective).observe(element); }).not.toThrow();
+    expect(() => {
+      debugElement.injector.get(NgxResizeDirective).observe(element);
+    }).not.toThrow();
   });
 });

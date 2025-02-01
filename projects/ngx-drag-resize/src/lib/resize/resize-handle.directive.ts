@@ -21,10 +21,7 @@ import {NgxResizeDirective} from './resize.directive';
  * @dynamic
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */
-@Directive({
-    selector: '[ngxResizeHandle]',
-    standalone: false
-})
+@Directive({ selector: '[ngxResizeHandle]' })
 export class NgxResizeHandleDirective implements AfterViewInit, OnDestroy {
   /**
    * Sets the attribute which define the side the HTML element will affect during drag

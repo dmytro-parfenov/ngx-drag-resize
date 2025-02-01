@@ -35,10 +35,7 @@ import {NgxResizeHandleType} from './resize-handle-type.enum';
  * @dynamic
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */
-@Directive({
-    selector: '[ngxResize]',
-    standalone: false
-})
+@Directive({ selector: '[ngxResize]' })
 export class NgxResizeDirective extends BoundaryDirective implements AfterViewInit, OnDestroy {
 
   /**

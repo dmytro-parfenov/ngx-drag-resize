@@ -90,23 +90,28 @@
 <p>NPM: <code>npm install ngx-drag-resize --save</code></p>
 <p>Yarn: <code>yarn add ngx-drag-resize</code></p>
 <h2>Usage</h2>
-<p>Import <code>NgxDragResizeModule</code> to your working module</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">import {NgxDragResizeModule} from &#39;ngx-drag-resize&#39;;
+<p>Ensure your component imports all required directives.</p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">import {
+  NgxDragDirective,
+  NgxDragHandleDirective,
+  NgxResizeDirective,
+  NgxResizeHandleDirective
+} from &#39;ngx-drag-resize&#39;;
 
-&#64;NgModule({
-  imports: [
-    NgxDragResizeModule
-  ]
+&#64;Component({
+  selector: &#39;app-root&#39;,
+  templateUrl: &#39;./app.component.html&#39;,
+  styleUrls: [&#39;./app.component.scss&#39;],
+  imports: [NgxResizeDirective, NgxResizeHandleDirective, NgxDragDirective, NgxDragHandleDirective]
 })
-export class AppModule { }</code></pre></div><p>Use directives in your template</p>
-<p>Simple drag</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxDrag&gt;drag me&lt;/div&gt;</code></pre></div><p>Initiates only by dragging <code>ngxDragHandle</code></p>
+export class AppComponent {}</code></pre></div><p>Use directives within your template.</p>
+<p><em>Simple drag.</em></p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxDrag&gt;drag me&lt;/div&gt;</code></pre></div><p><em>Initiates only when dragging handle.</em></p>
 <b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxDrag&gt;
   &lt;span&gt;drag me&lt;/span&gt;
   &lt;span ngxDragHandle&gt;handle&lt;/span&gt;
-&lt;/div&gt;</code></pre></div><p>A simple resize will work only by using scroll or two fingers on touch devices</p>
-<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxResize&gt;resize me&lt;/div&gt;</code></pre></div><p>Resize using borders.
-You have to style all elements as you want.</p>
+&lt;/div&gt;</code></pre></div><p><em>A simple resize works only via scrolling or using two fingers on touch devices.</em></p>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxResize&gt;resize me&lt;/div&gt;</code></pre></div><p><em>Resize using borders, and style all elements as desired.</em></p>
 <b>Example :</b><div><pre class="line-numbers"><code class="language-none">&lt;div ngxResize&gt;
   &lt;span&gt;resize me&lt;/span&gt;
   &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.TopLeft&quot;&gt;&lt;/div&gt;
@@ -117,7 +122,7 @@ You have to style all elements as you want.</p>
   &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.Bottom&quot;&gt;&lt;/div&gt;
   &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.BottomLeft&quot;&gt;&lt;/div&gt;
   &lt;div [ngxResizeHandle]=&quot;NgxResizeHandleType.Left&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre></div><p>More examples you can find in <a href="https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize-demo">demo app</a></p>
+&lt;/div&gt;</code></pre></div><p>You can find more examples in the <a href="https://github.com/dmytro-parfenov/ngx-drag-resize/tree/master/projects/ngx-drag-resize-demo">demo app</a></p>
 <h2>Documentation</h2>
 <p><a href="https://dmytro-parfenov.github.io/ngx-drag-resize/">Docs page</a></p>
 

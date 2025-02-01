@@ -4,19 +4,22 @@ import {By} from '@angular/platform-browser';
 import {NgxDragHandleDirective} from './drag-handle.directive';
 
 @Component({
-    template: `
+  imports: [
+    NgxDragHandleDirective
+  ],
+  template: `
     <div ngxDragHandle></div>
-  `,
-    standalone: false
+  `
 })
-class TestComponent { }
+class TestComponent {
+}
 
 describe('NgxDragHandleDirective', () => {
   let debugElement: DebugElement;
 
   beforeEach(() => {
     const fixture = TestBed.configureTestingModule({
-      declarations: [ NgxDragHandleDirective, TestComponent ]
+      imports: [NgxDragHandleDirective, TestComponent]
     }).createComponent(TestComponent);
 
     debugElement = fixture.debugElement.query(By.directive(NgxDragHandleDirective));

@@ -32,10 +32,7 @@ import {PositionBase} from '../core/position-base';
  * @dynamic
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */
-@Directive({
-    selector: '[ngxDrag]',
-    standalone: false
-})
+@Directive({ selector: '[ngxDrag]' })
 export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDestroy {
 
   /**

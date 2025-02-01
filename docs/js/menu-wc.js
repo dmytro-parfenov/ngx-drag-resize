@@ -45,44 +45,28 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                     </ul>
                 </li>
-                    <li class="chapter modules">
-                        <a data-type="chapter-link" href="modules.html">
-                            <div class="menu-toggler linked" data-bs-toggle="collapse" ${ isNormalMode ?
-                                'data-bs-target="#modules-links"' : 'data-bs-target="#xs-modules-links"' }>
-                                <span class="icon ion-ios-archive"></span>
-                                <span class="link-name">Modules</span>
+                        <li class="chapter">
+                            <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#directives-links"' :
+                                'data-bs-target="#xs-directives-links"' }>
+                                <span class="icon ion-md-code-working"></span>
+                                <span>Directives</span>
                                 <span class="icon ion-ios-arrow-down"></span>
                             </div>
-                        </a>
-                        <ul class="links collapse " ${ isNormalMode ? 'id="modules-links"' : 'id="xs-modules-links"' }>
-                            <li class="link">
-                                <a href="modules/NgxDragResizeModule.html" data-type="entity-link" >NgxDragResizeModule</a>
-                                <li class="chapter inner">
-                                    <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
-                                        'data-bs-target="#directives-links-module-NgxDragResizeModule-46e7109d9a7400dec529b73298f0c8de546c3ab96d637165fd71cb007bd836ac682463d80551bb2cb7e24314a6b54315fccf7d1e0d047a74ef2bbe85b35af867"' : 'data-bs-target="#xs-directives-links-module-NgxDragResizeModule-46e7109d9a7400dec529b73298f0c8de546c3ab96d637165fd71cb007bd836ac682463d80551bb2cb7e24314a6b54315fccf7d1e0d047a74ef2bbe85b35af867"' }>
-                                        <span class="icon ion-md-code-working"></span>
-                                        <span>Directives</span>
-                                        <span class="icon ion-ios-arrow-down"></span>
-                                    </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="directives-links-module-NgxDragResizeModule-46e7109d9a7400dec529b73298f0c8de546c3ab96d637165fd71cb007bd836ac682463d80551bb2cb7e24314a6b54315fccf7d1e0d047a74ef2bbe85b35af867"' :
-                                        'id="xs-directives-links-module-NgxDragResizeModule-46e7109d9a7400dec529b73298f0c8de546c3ab96d637165fd71cb007bd836ac682463d80551bb2cb7e24314a6b54315fccf7d1e0d047a74ef2bbe85b35af867"' }>
-                                        <li class="link">
-                                            <a href="directives/NgxDragDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >NgxDragDirective</a>
-                                        </li>
-                                        <li class="link">
-                                            <a href="directives/NgxDragHandleDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >NgxDragHandleDirective</a>
-                                        </li>
-                                        <li class="link">
-                                            <a href="directives/NgxResizeDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >NgxResizeDirective</a>
-                                        </li>
-                                        <li class="link">
-                                            <a href="directives/NgxResizeHandleDirective.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >NgxResizeHandleDirective</a>
-                                        </li>
-                                    </ul>
+                            <ul class="links collapse " ${ isNormalMode ? 'id="directives-links"' : 'id="xs-directives-links"' }>
+                                <li class="link">
+                                    <a href="directives/NgxDragDirective.html" data-type="entity-link" >NgxDragDirective</a>
                                 </li>
-                            </li>
-                </ul>
-                </li>
+                                <li class="link">
+                                    <a href="directives/NgxDragHandleDirective.html" data-type="entity-link" >NgxDragHandleDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="directives/NgxResizeDirective.html" data-type="entity-link" >NgxResizeDirective</a>
+                                </li>
+                                <li class="link">
+                                    <a href="directives/NgxResizeHandleDirective.html" data-type="entity-link" >NgxResizeHandleDirective</a>
+                                </li>
+                            </ul>
+                        </li>
                     <li class="chapter">
                         <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#interfaces-links"' :
                             'data-bs-target="#xs-interfaces-links"' }>
