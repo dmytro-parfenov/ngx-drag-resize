@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.0.1
+
+- update dependencies
+
 ## 2.0.0
 
 - Migrate to standalone components. See [Migrate an existing Angular project to standalone](https://angular.dev/reference/migrations/standalone)
