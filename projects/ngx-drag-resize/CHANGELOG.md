@@ -3,7 +3,7 @@
 ## 2.0.2
 
 - update dependencies
-- 
+
 ## 2.0.1
 
 - update dependencies
