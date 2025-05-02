@@ -1,4 +1,6 @@
 name: Deploy to Preview Channel on Pull Request
+permissions:
+  contents: read
 on:
   pull_request_target:
     branches:
