@@ -182,78 +182,6 @@
     </table>
 </section>
 
-            <section data-compodoc="block-constructor">
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(elementRef: ElementRef<HTMLElement>, platformId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank">object</a>, resizeDirective: <a href="../directives/NgxResizeDirective.html" target="_self">NgxResizeDirective</a>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/lib/resize/resize-handle.directive.ts:31</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>elementRef</td>
-                                                  
-                                                        <td>
-                                                                    <code>ElementRef&lt;HTMLElement&gt;</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>platformId</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>resizeDirective</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../directives/NgxResizeDirective.html" target="_self" >NgxResizeDirective</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
             <section data-compodoc="block-inputs">
     <h3 id="inputs">Inputs</h3>
@@ -278,7 +206,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/lib/resize/resize-handle.directive.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/lib/resize/resize-handle.directive.ts:25</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -300,17 +228,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  AfterViewInit,
-  Directive,
-  ElementRef,
-  HostBinding,
-  Inject,
-  Input,
-  OnDestroy,
-  Optional,
-  PLATFORM_ID,
-} from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, Directive, ElementRef, HostBinding, Input, OnDestroy, PLATFORM_ID, inject } from &#x27;@angular/core&#x27;;
 import { isPlatformServer } from &#x27;@angular/common&#x27;;
 import {NgxResizeHandleType} from &#x27;./resize-handle-type.enum&#x27;;
 import {NgxResizeDirective} from &#x27;./resize.directive&#x27;;
@@ -325,18 +243,16 @@ import {NgxResizeDirective} from &#x27;./resize.directive&#x27;;
  */
 @Directive({ selector: &#x27;[ngxResizeHandle]&#x27; })
 export class NgxResizeHandleDirective implements AfterViewInit, OnDestroy {
+  private readonly elementRef &#x3D; inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef);
+  private readonly platformId &#x3D; inject(PLATFORM_ID);
+  private readonly resizeDirective &#x3D; inject(NgxResizeDirective, { optional: true });
+
   /**
    * Sets the attribute which define the side the HTML element will affect during drag
    */
   @Input(&#x27;ngxResizeHandle&#x27;)
   @HostBinding(&#x27;attr.data-ngx-resize-handle-type&#x27;)
   type: NgxResizeHandleType | null &#x3D; null;
-
-  constructor(
-    private readonly elementRef: ElementRef&lt;HTMLElement&gt;,
-    @Inject(PLATFORM_ID) private readonly platformId: object,
-    @Optional() private readonly resizeDirective: NgxResizeDirective
-  ) {}
 
   /**
    * @inheritDoc

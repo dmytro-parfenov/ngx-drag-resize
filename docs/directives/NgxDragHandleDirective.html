@@ -155,78 +155,6 @@
         </section>
 
 
-            <section data-compodoc="block-constructor">
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(elementRef: ElementRef<HTMLElement>, dragDirective: <a href="../directives/NgxDragDirective.html" target="_self">NgxDragDirective</a>, platformId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank">object</a>)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/lib/drag/drag-handle.directive.ts:22</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>elementRef</td>
-                                                  
-                                                        <td>
-                                                                    <code>ElementRef&lt;HTMLElement&gt;</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>dragDirective</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../directives/NgxDragDirective.html" target="_self" >NgxDragDirective</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>platformId</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
 
 
 
@@ -239,15 +167,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  AfterViewInit,
-  Directive,
-  ElementRef,
-  Inject,
-  OnDestroy,
-  Optional,
-  PLATFORM_ID,
-} from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, Directive, ElementRef, OnDestroy, PLATFORM_ID, inject } from &#x27;@angular/core&#x27;;
 import { isPlatformServer } from &#x27;@angular/common&#x27;;
 import {NgxDragDirective} from &#x27;./drag.directive&#x27;;
 
@@ -261,11 +181,10 @@ import {NgxDragDirective} from &#x27;./drag.directive&#x27;;
  */
 @Directive({ selector: &#x27;[ngxDragHandle]&#x27; })
 export class NgxDragHandleDirective implements AfterViewInit, OnDestroy {
-  constructor(
-    private readonly elementRef: ElementRef&lt;HTMLElement&gt;,
-    @Optional() private readonly dragDirective: NgxDragDirective,
-    @Inject(PLATFORM_ID) private readonly platformId: object
-  ) {}
+  private readonly elementRef &#x3D; inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef);
+  private readonly dragDirective &#x3D; inject(NgxDragDirective, { optional: true });
+  private readonly platformId &#x3D; inject(PLATFORM_ID);
+
 
   /**
    * @inheritDoc

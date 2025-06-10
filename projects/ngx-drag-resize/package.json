@@ -1,7 +1,7 @@
 {
   "name": "ngx-drag-resize",
   "description": "The Angular library provides opportunity to use drag and resize functionality on HTML element",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "keywords": [
     "angular",
     "ngx",
@@ -29,8 +29,8 @@
     "version:patch": "npm version patch"
   },
   "peerDependencies": {
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0"
+    "@angular/common": "^20.0.0",
+    "@angular/core": "^20.0.0"
   },
   "dependencies": {
     "tslib": "^2.8.1"
