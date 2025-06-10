@@ -1,14 +1,4 @@
-import {
-  AfterViewInit,
-  Directive,
-  ElementRef,
-  HostBinding,
-  Inject,
-  Input,
-  OnDestroy,
-  Optional,
-  PLATFORM_ID,
-} from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, HostBinding, Input, OnDestroy, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformServer } from '@angular/common';
 import {NgxResizeHandleType} from './resize-handle-type.enum';
 import {NgxResizeDirective} from './resize.directive';
@@ -23,18 +13,16 @@ import {NgxResizeDirective} from './resize.directive';
  */
 @Directive({ selector: '[ngxResizeHandle]' })
 export class NgxResizeHandleDirective implements AfterViewInit, OnDestroy {
+  private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly resizeDirective = inject(NgxResizeDirective, { optional: true });
+
   /**
    * Sets the attribute which define the side the HTML element will affect during drag
    */
   @Input('ngxResizeHandle')
   @HostBinding('attr.data-ngx-resize-handle-type')
   type: NgxResizeHandleType | null = null;
-
-  constructor(
-    private readonly elementRef: ElementRef<HTMLElement>,
-    @Inject(PLATFORM_ID) private readonly platformId: object,
-    @Optional() private readonly resizeDirective: NgxResizeDirective
-  ) {}
 
   /**
    * @inheritDoc

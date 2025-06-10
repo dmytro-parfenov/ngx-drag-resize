@@ -4,29 +4,28 @@ import {
   ElementRef,
   EventEmitter,
   HostBinding,
-  Inject,
+  inject,
   Input,
   OnDestroy,
   Output,
   PLATFORM_ID,
-  Renderer2,
-  DOCUMENT
+  Renderer2
 } from '@angular/core';
-import { fromEvent, Subject, Subscription } from 'rxjs';
-import { isPlatformServer } from '@angular/common';
-import { filter, map, switchMap, takeUntil, tap } from 'rxjs/operators';
+import {fromEvent, Subject, Subscription} from 'rxjs';
+import {isPlatformServer} from '@angular/common';
+import {filter, map, switchMap, takeUntil, tap} from 'rxjs/operators';
 import {BoundaryDirective} from '../shared/boundary/boundary.directive';
 import {Axis} from '../core/axis';
 import {PositionType} from './position-type';
 import {NgxResize} from './resize';
 import {DragService} from '../core/drag.service';
-import {WINDOW} from '../core/window.token';
 import {MovementBase} from '../core/movement/movement-base';
 import {Movement} from '../core/movement/movement';
 import {PositionBase} from '../core/position-base';
 import {Boundary} from '../shared/boundary/boundary';
 import {Scale} from './scale';
 import {NgxResizeHandleType} from './resize-handle-type.enum';
+import {WINDOW} from '../core/window.token';
 
 /**
  * The directive that allows to resize HTML element on page
@@ -36,8 +35,14 @@ import {NgxResizeHandleType} from './resize-handle-type.enum';
  * @dynamic
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */
-@Directive({ selector: '[ngxResize]' })
+@Directive({selector: '[ngxResize]'})
 export class NgxResizeDirective extends BoundaryDirective implements AfterViewInit, OnDestroy {
+  readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
+  private readonly renderer = inject(Renderer2);
+  private readonly dragService = inject(DragService);
+  private readonly window = inject<Window>(WINDOW);
+  private readonly platformId = inject(PLATFORM_ID);
+
 
   /**
    * Emits when directive was destroyed
@@ -169,17 +174,6 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
    */
   @Output() ngxResized = new EventEmitter<NgxResize>();
 
-  constructor(
-    readonly elementRef: ElementRef<HTMLElement>,
-    private readonly renderer: Renderer2,
-    private readonly dragService: DragService,
-    @Inject(DOCUMENT) private readonly document: Document,
-    @Inject(WINDOW) private readonly window: Window,
-    @Inject(PLATFORM_ID) private readonly platformId: object
-  ) {
-    super(window, document);
-  }
-
   /**
    * @inheritDoc
    */
@@ -263,7 +257,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
       )
       .subscribe();
 
-    this.observers.push({ subscription: subscription$, element: target });
+    this.observers.push({subscription: subscription$, element: target});
   }
 
   /**
@@ -316,7 +310,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
 
               const distance = this.touchesDistance(aTouch, bTouch);
 
-              this.onScale({ delta: distance - prevDistance }, event);
+              this.onScale({delta: distance - prevDistance}, event);
 
               prevDistance = distance;
             }),
@@ -350,7 +344,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
       tap((event) => event.preventDefault()),
       tap((event) => {
         const delta = this.ngxResizeWheelInverse ? event.deltaY : event.deltaY * -1;
-        this.onScale({ delta }, event);
+        this.onScale({delta}, event);
       }),
       takeUntil(this.wheelBehaviourChange$),
       takeUntil(this.destroy$)
@@ -386,7 +380,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
    */
   private initialResize(): void {
     setTimeout(() => {
-      this.onScale({ delta: 0 });
+      this.onScale({delta: 0});
     });
   }
 
@@ -744,7 +738,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
       left = left - (width - hostElementRect.width) / 2;
     }
 
-    return { left, width };
+    return {left, width};
   }
 
   /**
@@ -783,7 +777,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
       top = top - (height - hostElementRect.height) / 2;
     }
 
-    return { top, height };
+    return {top, height};
   }
 
   /**

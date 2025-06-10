@@ -1,12 +1,4 @@
-import {
-  AfterViewInit,
-  Directive,
-  ElementRef,
-  Inject,
-  OnDestroy,
-  Optional,
-  PLATFORM_ID,
-} from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, OnDestroy, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformServer } from '@angular/common';
 import {NgxDragDirective} from './drag.directive';
 
@@ -20,11 +12,10 @@ import {NgxDragDirective} from './drag.directive';
  */
 @Directive({ selector: '[ngxDragHandle]' })
 export class NgxDragHandleDirective implements AfterViewInit, OnDestroy {
-  constructor(
-    private readonly elementRef: ElementRef<HTMLElement>,
-    @Optional() private readonly dragDirective: NgxDragDirective,
-    @Inject(PLATFORM_ID) private readonly platformId: object
-  ) {}
+  private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
+  private readonly dragDirective = inject(NgxDragDirective, { optional: true });
+  private readonly platformId = inject(PLATFORM_ID);
+
 
   /**
    * @inheritDoc

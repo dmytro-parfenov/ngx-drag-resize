@@ -2,28 +2,27 @@ import {
   Directive,
   ElementRef,
   EventEmitter,
-  Inject,
+  inject,
   Input,
   OnDestroy,
   OnInit,
   Output,
   PLATFORM_ID,
-  Renderer2,
-  DOCUMENT
+  Renderer2
 } from '@angular/core';
-import { Subject } from 'rxjs';
-import { map, takeUntil, tap } from 'rxjs/operators';
-import { isPlatformServer } from '@angular/common';
+import {Subject} from 'rxjs';
+import {map, takeUntil, tap} from 'rxjs/operators';
+import {isPlatformServer} from '@angular/common';
 import {BoundaryDirective} from '../shared/boundary/boundary.directive';
 import {PositionStrategy} from './position-strategy';
 import {Axis} from '../core/axis';
 import {NgxDrag} from './drag';
 import {DragService} from '../core/drag.service';
-import {WINDOW} from '../core/window.token';
 import {MovementBase} from '../core/movement/movement-base';
 import {Movement} from '../core/movement/movement';
 import {Boundary} from '../shared/boundary/boundary';
 import {PositionBase} from '../core/position-base';
+import {WINDOW} from '../core/window.token';
 
 /**
  * The directive that allows to drag HTML element on page
@@ -33,8 +32,14 @@ import {PositionBase} from '../core/position-base';
  * @dynamic
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */
-@Directive({ selector: '[ngxDrag]' })
+@Directive({selector: '[ngxDrag]'})
 export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDestroy {
+  private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
+  private readonly renderer = inject(Renderer2);
+  private readonly dragService = inject(DragService);
+  private readonly window = inject<Window>(WINDOW);
+  private readonly platformId = inject(PLATFORM_ID);
+
 
   /**
    * Initial size and position of host element
@@ -90,17 +95,6 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
    * Emits changes when element was dragged
    */
   @Output() ngxDragged = new EventEmitter<NgxDrag>();
-
-  constructor(
-    private readonly elementRef: ElementRef<HTMLElement>,
-    private readonly renderer: Renderer2,
-    private readonly dragService: DragService,
-    @Inject(WINDOW) private readonly window: Window,
-    @Inject(DOCUMENT) private readonly document: Document,
-    @Inject(PLATFORM_ID) private readonly platformId: object
-  ) {
-    super(window, document);
-  }
 
   /**
    * @inheritDoc

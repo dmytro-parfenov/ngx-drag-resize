@@ -1,5 +1,6 @@
-import {Directive} from '@angular/core';
+import {Directive, DOCUMENT, inject} from '@angular/core';
 import {Boundary} from './boundary';
+import {WINDOW} from '../../core/window.token';
 
 /**
  * The directive is used to work with boundary area for HTML element
@@ -11,14 +12,15 @@ import {Boundary} from './boundary';
  * @dynamic
  * @see https://angular.io/guide/angular-compiler-options#strictmetadataemit
  */
-@Directive({ selector: '[ngxBoundary]' })
+@Directive({selector: '[ngxBoundary]'})
 export class BoundaryDirective {
+  private readonly windowObject = inject<Window>(WINDOW);
+  private readonly documentObject = inject<Document>(DOCUMENT);
+
   /**
    * CSS selector or HTML element
    */
   protected boundary: string | HTMLElement | Window | null = null;
-
-  constructor(private readonly windowObject?: Window, private readonly documentObject?: Document) {}
 
   /**
    * Get boundary position based on {@link boundary}
