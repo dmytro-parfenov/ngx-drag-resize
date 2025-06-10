@@ -1,6 +1,6 @@
-import {Inject, Injectable} from '@angular/core';
+import {Inject, Injectable, DOCUMENT} from '@angular/core';
 import {EMPTY, fromEvent, merge, Observable} from 'rxjs';
-import {DOCUMENT} from '@angular/common';
+
 import {map, switchMap, takeUntil, tap} from 'rxjs/operators';
 import {MovementNative} from './movement/movement-native';
 import {PositionBase} from './position-base';

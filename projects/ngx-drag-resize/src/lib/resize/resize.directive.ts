@@ -10,9 +10,10 @@ import {
   Output,
   PLATFORM_ID,
   Renderer2,
+  DOCUMENT
 } from '@angular/core';
 import { fromEvent, Subject, Subscription } from 'rxjs';
-import { DOCUMENT, isPlatformServer } from '@angular/common';
+import { isPlatformServer } from '@angular/common';
 import { filter, map, switchMap, takeUntil, tap } from 'rxjs/operators';
 import {BoundaryDirective} from '../shared/boundary/boundary.directive';
 import {Axis} from '../core/axis';
