@@ -9,7 +9,7 @@ workspace_location: &workspace_location ~/
 executors:
   default-executor:
     docker:
-      - image: cimg/node:22.11-browsers
+      - image: cimg/node:22.16-browsers
     working_directory: ~/ngx-drag-resize
 
 commands:
