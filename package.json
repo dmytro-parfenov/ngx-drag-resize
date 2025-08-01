@@ -63,7 +63,7 @@
     "@angular/compiler-cli": "^20.0.2",
     "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "^5.1.4",
-    "@types/node": "^24.0.0",
+    "@types/node": "^24.1.0",
     "@typescript-eslint/eslint-plugin": "^8.33.0",
     "@typescript-eslint/parser": "^8.29.0",
     "eslint": "^9.30.1",
