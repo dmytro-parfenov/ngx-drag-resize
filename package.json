@@ -60,7 +60,7 @@
     "@angular-eslint/schematics": "^20.0.0",
     "@angular-eslint/template-parser": "^20.0.0",
     "@angular/cli": "^20.0.5",
-    "@angular/compiler-cli": "^20.0.2",
+    "@angular/compiler-cli": "^20.1.4",
     "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "^5.1.4",
     "@types/node": "^24.1.0",
