@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.1.0
+
+- update dependencies
+
 ## 3.0.0
 
 - migrate to Angular v20
