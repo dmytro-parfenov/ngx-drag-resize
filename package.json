@@ -64,7 +64,7 @@
     "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "^5.1.4",
     "@types/node": "^24.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
     "@typescript-eslint/parser": "^8.38.0",
     "eslint": "^9.34.0",
     "jasmine-core": "^5.11.0",
