@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.3.0
+
+- update dependencies
+
 ## 3.2.0
 
 - update dependencies
