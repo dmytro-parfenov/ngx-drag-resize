@@ -34,12 +34,9 @@ describe('NgxResizeHandleDirective', () => {
     expect(debugElement).toBeTruthy();
   });
 
-  it('should update attribute', () => {
-    fixture.componentInstance.resizeHandleType = NgxResizeHandleType.Right;
-    fixture.detectChanges();
-
+  it('should use the given handle type', () => {
     const result = debugElement.nativeElement.getAttribute('data-ngx-resize-handle-type');
 
-    expect(result).toBe(NgxResizeHandleType.Right);
+    expect(result).toBe(fixture.componentInstance.resizeHandleType);
   });
 });

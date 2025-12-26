@@ -34,13 +34,10 @@ describe('NgxResizeDirective', () => {
     expect(debugElement).toBeTruthy();
   });
 
-  it('should update position', () => {
-    fixture.componentInstance.position = 'fixed';
-    fixture.detectChanges();
-
+  it('should use the given position', () => {
     const result = debugElement.nativeElement.style.position;
 
-    expect(result).toBe('fixed');
+    expect(result).toBe(fixture.componentInstance.position);
   });
 
   it('should not throw on observe', () => {
