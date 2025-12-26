@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.0.0
+
+- migrate to Angular v21
+
 ## 3.3.0
 
 - update dependencies

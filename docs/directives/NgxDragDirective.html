@@ -283,7 +283,7 @@
                     <td class="col-md-4">
                         <div class="io-description"><p>Constrain for the dragging element.
 Can be as a HTMLElement or CSS selector.
-You can put &#39;window&#39; string to define window object as a constrain.</p>
+You can put &#39;window&#39; string to define window object as a constraint.</p>
 </div>
                     </td>
                 </tr>
@@ -380,9 +380,9 @@ You can put &#39;window&#39; string to define window object as a constrain.</p>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Define positioning strategy.</p>
-<p>&#39;free&#39; - position will changing by &#39;transform: translate3d()&#39; style
+<p>&#39;free&#39; - position will change by &#39;transform: translate3d()&#39; style
 See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d">https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d</a></p>
-<p>&#39;relative&#39; - position will changing by &#39;top&#39; and &#39;left&#39; style
+<p>&#39;relative&#39; - position will change by &#39;top&#39; and &#39;left&#39; style
 See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">https://developer.mozilla.org/en-US/docs/Web/CSS/position</a></p>
 <p>Default is &#39;free&#39;.</p>
 </div>
@@ -441,7 +441,7 @@ See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">https://
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>observe(target)</code>
+<code>observe(target: unknown)</code>
                 </td>
             </tr>
 
@@ -466,6 +466,7 @@ See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">https://
                                     <thead>
                                         <tr>
                                             <td>Name</td>
+                                                <td>Type</td>
                                             <td>Optional</td>
                                                 <td>Default value</td>
                                         </tr>
@@ -473,6 +474,9 @@ See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">https://
                                     <tbody>
                                         <tr>
                                                 <td>target</td>
+                                            <td>
+                                                        <code>unknown</code>
+                                            </td>
 
                                             <td>
                                                     No
@@ -527,7 +531,7 @@ See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">https://
                         <td class="col-md-4">
                                 <div class="io-description"><p>Constrain for the dragging element.
 Can be as a HTMLElement or CSS selector.
-You can put &#39;window&#39; string to define window object as a constrain.</p>
+You can put &#39;window&#39; string to define window object as a constraint.</p>
 </div>
 
                                 <div class="io-description">
@@ -555,8 +559,6 @@ You can put &#39;window&#39; string to define window object as a constrain.</p>
                                                     </tr>
                                             </tbody>
                                         </table>
-                                </div>
-                                <div>
                                 </div>
                                 <div class="io-description">
                                     <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -636,10 +638,10 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   /**
    * Define positioning strategy.
    *
-   * &#x27;free&#x27; - position will changing by &#x27;transform: translate3d()&#x27; style
+   * &#x27;free&#x27; - position will change by &#x27;transform: translate3d()&#x27; style
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d
    *
-   * &#x27;relative&#x27; - position will changing by &#x27;top&#x27; and &#x27;left&#x27; style
+   * &#x27;relative&#x27; - position will change by &#x27;top&#x27; and &#x27;left&#x27; style
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
    *
    * Default is &#x27;free&#x27;.
@@ -659,7 +661,7 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   /**
    * Constrain for the dragging element.
    * Can be as a HTMLElement or CSS selector.
-   * You can put &#x27;window&#x27; string to define window object as a constrain.
+   * You can put &#x27;window&#x27; string to define window object as a constraint.
    */
   @Input() set ngxDragBoundary(boundary: string | HTMLElement) {
     this.boundary &#x3D; boundary;

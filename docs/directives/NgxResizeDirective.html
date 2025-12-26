@@ -364,7 +364,7 @@
                     <td class="col-md-4">
                         <div class="io-description"><p>Constrain of the resizing area.
 Can be as a HTMLElement or CSS selector.
-You can put &#39;window&#39; string to define window object as a constrain.</p>
+You can put &#39;window&#39; string to define window object as a constraint.</p>
 </div>
                     </td>
                 </tr>
@@ -554,8 +554,8 @@ Will be applied to host element.</p>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Disables resize by touches.
-By default is &#39;false&#39;.
-Resize work by using two fingers.</p>
+By default, is &#39;false&#39;.
+Resizing works by using two fingers.</p>
 </div>
                     </td>
                 </tr>
@@ -583,7 +583,7 @@ Resize work by using two fingers.</p>
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Disables resize by wheel.
-By default is &#39;false&#39;.</p>
+By default, is &#39;false&#39;.</p>
 </div>
                     </td>
                 </tr>
@@ -847,6 +847,12 @@ If value not provided the element can be scaled just by &#39;wheel&#39;.</p>
             </tr>
                 <tr>
                     <td class="col-md-4">
+                        <i>Type : </i>    <code>unknown</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
                         <i>Default value : </i><code>inject&lt;ElementRef&lt;HTMLElement&gt;&gt;(ElementRef)</code>
                     </td>
                 </tr>
@@ -889,7 +895,7 @@ If value not provided the element can be scaled just by &#39;wheel&#39;.</p>
                         <td class="col-md-4">
                                 <div class="io-description"><p>Constrain of the resizing area.
 Can be as a HTMLElement or CSS selector.
-You can put &#39;window&#39; string to define window object as a constrain.</p>
+You can put &#39;window&#39; string to define window object as a constraint.</p>
 </div>
 
                                 <div class="io-description">
@@ -917,8 +923,6 @@ You can put &#39;window&#39; string to define window object as a constrain.</p>
                                                     </tr>
                                             </tbody>
                                         </table>
-                                </div>
-                                <div>
                                 </div>
                                 <div class="io-description">
                                     <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -982,8 +986,6 @@ If value not provided the element can be scaled just by &#39;wheel&#39;.</p>
                                             </tbody>
                                         </table>
                                 </div>
-                                <div>
-                                </div>
                                 <div class="io-description">
                                     <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
@@ -1015,7 +1017,7 @@ If value not provided the element can be scaled just by &#39;wheel&#39;.</p>
                     <tr>
                         <td class="col-md-4">
                                 <div class="io-description"><p>Disables resize by wheel.
-By default is &#39;false&#39;.</p>
+By default, is &#39;false&#39;.</p>
 </div>
 
                                 <div class="io-description">
@@ -1043,8 +1045,6 @@ By default is &#39;false&#39;.</p>
                                                     </tr>
                                             </tbody>
                                         </table>
-                                </div>
-                                <div>
                                 </div>
                                 <div class="io-description">
                                     <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -1077,8 +1077,8 @@ By default is &#39;false&#39;.</p>
                     <tr>
                         <td class="col-md-4">
                                 <div class="io-description"><p>Disables resize by touches.
-By default is &#39;false&#39;.
-Resize work by using two fingers.</p>
+By default, is &#39;false&#39;.
+Resizing works by using two fingers.</p>
 </div>
 
                                 <div class="io-description">
@@ -1106,8 +1106,6 @@ Resize work by using two fingers.</p>
                                                     </tr>
                                             </tbody>
                                         </table>
-                                </div>
-                                <div>
                                 </div>
                                 <div class="io-description">
                                     <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -1175,17 +1173,17 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   private destroy$ &#x3D; new Subject();
 
   /**
-   * Emits next every time when behaviour for wheel event was changed
+   * Emits next every time when behavior for wheel event was changed
    */
   private wheelBehaviourChange$ &#x3D; new Subject();
 
   /**
-   * Emits next every time when behaviour for touches event was changed
+   * Emits next every time when behavior for touches event was changed
    */
   private touchBehaviourChange$ &#x3D; new Subject();
 
   /**
-   * An array of observers which affect on resizable element
+   * An array of observers for the resizable element
    */
   private observers: { subscription: Subscription; element: HTMLElement }[] &#x3D; [];
 
@@ -1236,7 +1234,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   /**
    * Constrain of the resizing area.
    * Can be as a HTMLElement or CSS selector.
-   * You can put &#x27;window&#x27; string to define window object as a constrain.
+   * You can put &#x27;window&#x27; string to define window object as a constraint.
    */
   @Input() set ngxResizeBoundary(boundary: string | HTMLElement) {
     this.boundary &#x3D; boundary;
@@ -1262,7 +1260,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
 
   /**
    * Disables resize by wheel.
-   * By default is &#x27;false&#x27;.
+   * By default, is &#x27;false&#x27;.
    */
   @Input() set ngxResizeWheelDisabled(disabled: boolean) {
     this.isWheelDisabled &#x3D; disabled;
@@ -1276,8 +1274,8 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
 
   /**
    * Disables resize by touches.
-   * By default is &#x27;false&#x27;.
-   * Resize work by using two fingers.
+   * By default, is &#x27;false&#x27;.
+   * Resizing works by using two fingers.
    */
   @Input() set ngxResizeTouchesDisabled(disabled: boolean) {
     this.isTouchesDisabled &#x3D; disabled;
@@ -1607,20 +1605,15 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
    */
   private canResize(initiatorType: NgxResizeHandleType): boolean {
     switch (initiatorType) {
-      case NgxResizeHandleType.TopLeft:
-      case NgxResizeHandleType.TopRight:
-      case NgxResizeHandleType.BottomLeft:
-      case NgxResizeHandleType.BottomRight:
-        return !this.ngxResizeLockAxis;
       case NgxResizeHandleType.Left:
       case NgxResizeHandleType.Right:
         return this.ngxResizeLockAxis !&#x3D;&#x3D; &#x27;x&#x27;;
       case NgxResizeHandleType.Top:
       case NgxResizeHandleType.Bottom:
         return this.ngxResizeLockAxis !&#x3D;&#x3D; &#x27;y&#x27;;
+      default:
+        return !this.ngxResizeLockAxis;
     }
-
-    return !this.ngxResizeLockAxis;
   }
 
   /**
