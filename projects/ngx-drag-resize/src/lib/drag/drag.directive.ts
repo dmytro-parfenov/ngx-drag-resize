@@ -62,10 +62,10 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   /**
    * Define positioning strategy.
    *
-   * 'free' - position will changing by 'transform: translate3d()' style
+   * 'free' - position will change by 'transform: translate3d()' style
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d
    *
-   * 'relative' - position will changing by 'top' and 'left' style
+   * 'relative' - position will change by 'top' and 'left' style
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/position
    *
    * Default is 'free'.
@@ -85,7 +85,7 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   /**
    * Constrain for the dragging element.
    * Can be as a HTMLElement or CSS selector.
-   * You can put 'window' string to define window object as a constrain.
+   * You can put 'window' string to define window object as a constraint.
    */
   @Input() set ngxDragBoundary(boundary: string | HTMLElement) {
     this.boundary = boundary;

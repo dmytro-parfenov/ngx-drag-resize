@@ -87,8 +87,8 @@ export class BoundaryDirective {
         return value - boundary.left;
       case 'top':
         return value - boundary.top;
+      default:
+        return value;
     }
-
-    return value;
   }
 }

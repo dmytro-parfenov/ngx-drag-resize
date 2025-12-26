@@ -50,17 +50,17 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   private destroy$ = new Subject();
 
   /**
-   * Emits next every time when behaviour for wheel event was changed
+   * Emits next every time when behavior for wheel event was changed
    */
   private wheelBehaviourChange$ = new Subject();
 
   /**
-   * Emits next every time when behaviour for touches event was changed
+   * Emits next every time when behavior for touches event was changed
    */
   private touchBehaviourChange$ = new Subject();
 
   /**
-   * An array of observers which affect on resizable element
+   * An array of observers for the resizable element
    */
   private observers: { subscription: Subscription; element: HTMLElement }[] = [];
 
@@ -111,7 +111,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   /**
    * Constrain of the resizing area.
    * Can be as a HTMLElement or CSS selector.
-   * You can put 'window' string to define window object as a constrain.
+   * You can put 'window' string to define window object as a constraint.
    */
   @Input() set ngxResizeBoundary(boundary: string | HTMLElement) {
     this.boundary = boundary;
@@ -137,7 +137,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
 
   /**
    * Disables resize by wheel.
-   * By default is 'false'.
+   * By default, is 'false'.
    */
   @Input() set ngxResizeWheelDisabled(disabled: boolean) {
     this.isWheelDisabled = disabled;
@@ -151,8 +151,8 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
 
   /**
    * Disables resize by touches.
-   * By default is 'false'.
-   * Resize work by using two fingers.
+   * By default, is 'false'.
+   * Resizing works by using two fingers.
    */
   @Input() set ngxResizeTouchesDisabled(disabled: boolean) {
     this.isTouchesDisabled = disabled;
@@ -482,20 +482,15 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
    */
   private canResize(initiatorType: NgxResizeHandleType): boolean {
     switch (initiatorType) {
-      case NgxResizeHandleType.TopLeft:
-      case NgxResizeHandleType.TopRight:
-      case NgxResizeHandleType.BottomLeft:
-      case NgxResizeHandleType.BottomRight:
-        return !this.ngxResizeLockAxis;
       case NgxResizeHandleType.Left:
       case NgxResizeHandleType.Right:
         return this.ngxResizeLockAxis !== 'x';
       case NgxResizeHandleType.Top:
       case NgxResizeHandleType.Bottom:
         return this.ngxResizeLockAxis !== 'y';
+      default:
+        return !this.ngxResizeLockAxis;
     }
-
-    return !this.ngxResizeLockAxis;
   }
 
   /**
