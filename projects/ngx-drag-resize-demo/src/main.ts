@@ -4,7 +4,6 @@ import {enableProdMode, importProvidersFrom, provideZoneChangeDetection} from '@
 import {environment} from './environments/environment';
 import {bootstrapApplication, BrowserModule} from '@angular/platform-browser';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {provideAnimations} from '@angular/platform-browser/animations';
 import {AppComponent} from './app/app.component';
 
 if (environment.production) {
@@ -13,8 +12,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideZoneChangeDetection(),importProvidersFrom(BrowserModule, MatToolbarModule),
-    provideAnimations()
+    provideZoneChangeDetection(), importProvidersFrom(BrowserModule, MatToolbarModule)
   ]
 })
   .catch(err => console.error(err));
