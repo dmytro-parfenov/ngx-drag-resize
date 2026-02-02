@@ -59,7 +59,7 @@
     "@angular-eslint/eslint-plugin-template": "^21.2.0",
     "@angular-eslint/schematics": "^21.1.0",
     "@angular-eslint/template-parser": "^21.1.0",
-    "@angular/cli": "^21.0.4",
+    "@angular/cli": "^21.1.2",
     "@angular/compiler-cli": "^21.0.6",
     "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "^5.1.4",
