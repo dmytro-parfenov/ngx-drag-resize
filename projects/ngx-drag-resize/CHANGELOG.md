@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 4.2.0
+
+- update dependencies
+
 ## 4.1.0
 
 - update dependencies
