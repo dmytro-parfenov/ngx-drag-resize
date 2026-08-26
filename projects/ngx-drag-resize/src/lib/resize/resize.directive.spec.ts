@@ -1,4 +1,4 @@
-import {Component, DebugElement} from '@angular/core';
+import {Component, DebugElement, ChangeDetectionStrategy} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {NgxResizeDirective} from './resize.directive';
@@ -8,6 +8,7 @@ import {PositionType} from './position-type';
   imports: [
     NgxResizeDirective
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div ngxResize [ngxResizePosition]="position"></div>
   `

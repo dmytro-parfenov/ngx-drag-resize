@@ -1,4 +1,4 @@
-import {Component, DebugElement} from '@angular/core';
+import {Component, DebugElement, ChangeDetectionStrategy} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {NgxResizeHandleDirective} from './resize-handle.directive';
@@ -8,6 +8,7 @@ import {NgxResizeHandleType} from './resize-handle-type.enum';
   imports: [
     NgxResizeHandleDirective
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div [ngxResizeHandle]="resizeHandleType"></div>
   `

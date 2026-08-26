@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {
   NgxDragDirective,
   NgxDragHandleDirective,
@@ -12,6 +12,7 @@ import {MatToolbar} from '@angular/material/toolbar';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [MatToolbar, NgxResizeDirective, NgxResizeHandleDirective, NgxDragDirective, NgxDragHandleDirective]
 })
 export class AppComponent {

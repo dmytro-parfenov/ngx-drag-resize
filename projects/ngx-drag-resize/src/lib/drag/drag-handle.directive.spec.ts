@@ -1,4 +1,4 @@
-import {Component, DebugElement} from '@angular/core';
+import {Component, DebugElement, ChangeDetectionStrategy} from '@angular/core';
 import {TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 import {NgxDragHandleDirective} from './drag-handle.directive';
@@ -7,6 +7,7 @@ import {NgxDragHandleDirective} from './drag-handle.directive';
   imports: [
     NgxDragHandleDirective
   ],
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <div ngxDragHandle></div>
   `
