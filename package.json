@@ -20,7 +20,7 @@
   "scripts": {
     "ng": "ng",
     "start:lib": "ng run ngx-drag-resize:build --watch",
-    "start:demo": "ng run ngx-drag-resize-demo:serve --host 0.0.0.0 -o --disable-host-check",
+    "start:demo": "ng run ngx-drag-resize-demo:serve --host 0.0.0.0 -o",
     "test:lib": "ng run ngx-drag-resize:test",
     "test:lib:ci": "ng run ngx-drag-resize:test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:demo": "ng run ngx-drag-resize-demo:test",
