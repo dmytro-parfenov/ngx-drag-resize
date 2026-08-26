@@ -7,7 +7,7 @@ import {NgxDragHandleDirective} from './drag-handle.directive';
   imports: [
     NgxDragHandleDirective
   ],
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div ngxDragHandle></div>
   `

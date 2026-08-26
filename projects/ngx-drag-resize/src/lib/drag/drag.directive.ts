@@ -245,7 +245,7 @@ export class NgxDragDirective extends BoundaryDirective implements OnInit, OnDes
   /**
    * Updates the host style
    */
-  private updateHostStyle(style: string, value: any): void {
+  private updateHostStyle(style: string, value: string): void {
     this.renderer.setStyle(this.elementRef.nativeElement, style, value);
   }
 

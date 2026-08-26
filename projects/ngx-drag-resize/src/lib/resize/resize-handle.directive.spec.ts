@@ -8,7 +8,7 @@ import {NgxResizeHandleType} from './resize-handle-type.enum';
   imports: [
     NgxResizeHandleDirective
   ],
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div [ngxResizeHandle]="resizeHandleType"></div>
   `

@@ -8,7 +8,7 @@ import {PositionType} from './position-type';
   imports: [
     NgxResizeDirective
   ],
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div ngxResize [ngxResizePosition]="position"></div>
   `

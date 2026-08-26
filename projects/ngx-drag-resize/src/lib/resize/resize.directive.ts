@@ -792,7 +792,7 @@ export class NgxResizeDirective extends BoundaryDirective implements AfterViewIn
   /**
    * Updates host element style
    */
-  private updateHostStyle(style: string, value: any): void {
+  private updateHostStyle(style: string, value: string): void {
     this.renderer.setStyle(this.elementRef.nativeElement, style, value);
   }
 
