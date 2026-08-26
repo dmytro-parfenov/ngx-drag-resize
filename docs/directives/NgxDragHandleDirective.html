@@ -84,7 +84,14 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+    <button type="button"
+        class="search-input-clear"
+        aria-label="Clear search"
+        data-search-input-clear>&times;</button>
+</div>
+            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -111,6 +118,11 @@
   <li class="breadcrumb-item" >NgxDragHandleDirective</li>
 </ol>
 
+<div class="io-file io-file-path" data-compodoc="entity-file-path">
+    <span class="icon ion-ios-document" aria-hidden="true"></span>
+    <code>src/lib/drag/drag-handle.directive.ts</code>
+</div>
+
 <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
             <a href="#info" 
@@ -128,19 +140,13 @@
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="info">
-        <p class="comment">
-            <h3>File</h3>
-        </p>
-        <p class="comment">
-            <code>src/lib/drag/drag-handle.directive.ts</code>
-        </p>
-
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
                 <p>The directive that allows to mark HTML element as handle of dragging element for <a href="../directives/NgxDragDirective.html">NgxDragDirective</a></p>
+<p>Dmytro Parfenov <a href="mailto:dmitryparfenov937@gmail.com">dmitryparfenov937@gmail.com</a></p>
 <p>See <a href="https://angular.io/guide/angular-compiler-options#strictmetadataemit">https://angular.io/guide/angular-compiler-options#strictmetadataemit</a></p>
 
             </p>
@@ -150,10 +156,15 @@
                 <h3>Implements</h3>
             </p>
             <p class="comment">
-                            <code><a href="https://angular.io/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
-                            <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                            <code><a href="https://angular.dev/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                            <code><a href="https://angular.dev/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
             </p>
 
+            <p class="comment">
+                <h3>Example</h3>
+            </p>
+            <div class="io-description">
+            </div>
 
         <section data-compodoc="block-metadata">
             <h3>Metadata</h3>
@@ -172,16 +183,31 @@
             </table>
         </section>
 
+                <section data-compodoc="block-relationships">
+            <h3>Relationships</h3>
 
+            <div class="row pt-3">
+                <div class="col-sm-6">
+                    <h4>Used by</h4>
+                        <p class="comment"><i>No results matching.</i></p>
+                </div>
 
-
-
-
-
-
-
+                <div class="col-sm-6">
+                    <h4>Depends on</h4>
+                        <ul class="list-unstyled relationships-list">
+                                <li>
+                                            <code><a href="https://angular.dev/api/core/AfterViewInit" target="_blank" >AfterViewInit</a></code>
+                                </li>
+                                <li>
+                                            <code><a href="https://angular.dev/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                                </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
 
     </div>
+
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
@@ -279,6 +305,24 @@ export class NgxDragHandleDirective implements AfterViewInit, OnDestroy {
 
        <script>
                $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var updateDarkModeSwitchOffset = function () {
+                    var content = document.querySelector('.content');
+                    var scrollbarWidth = 0;
+
+                    if (content) {
+                         scrollbarWidth = Math.max(0, content.offsetWidth - content.clientWidth);
+                    }
+
+                    document.documentElement.style.setProperty(
+                         '--content-scrollbar-width',
+                         scrollbarWidth + 'px'
+                    );
+               };
+
+               updateDarkModeSwitchOffset();
+               requestAnimationFrame(updateDarkModeSwitchOffset);
+               window.addEventListener('resize', updateDarkModeSwitchOffset);
+
                checkToggle(darkModeState);
                if ($darkModeToggleSwitchers.length > 0) {
                     for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
@@ -294,7 +338,6 @@ export class NgxDragHandleDirective implements AfterViewInit, OnDestroy {
        <script src="../js/libs/lit-html.js"></script>
 
        <script src="../js/menu-wc.js" defer></script>
-       <script nomodule src="../js/menu-wc_es5.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 

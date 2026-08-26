@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 5.0.0
+
+- migrate to Angular v22
+
 ## 4.2.0
 
 - update dependencies
