@@ -196,18 +196,6 @@
               "projects/ngx-drag-resize-demo/**/*.html"
             ]
           }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/ngx-drag-resize-demo/e2e/protractor.conf.js",
-            "devServerTarget": "ngx-drag-resize-demo:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ngx-drag-resize-demo:serve:production"
-            }
-          }
         }
       }
     }
